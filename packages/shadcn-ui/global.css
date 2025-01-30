@@ -1,0 +1,11 @@
+@import '@repo/tailwind-config/globals.css';
+
+
+@layer base {
+  * {
+    @apply border-[var(--border)];
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

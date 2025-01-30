@@ -1,0 +1,1 @@
+export const tailwind = './globals.css';
