@@ -41,7 +41,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "fumadocs-core": "15.0.0",
-    "fumadocs-mdx": "11.3.2",
+    "fumadocs-mdx": "11.4.0",
     "fumadocs-typescript": "^3.0.3",
     "fumadocs-ui": "15.0.0",
     "geist": "^1.3.1",
