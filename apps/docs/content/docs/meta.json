@@ -1,5 +1,13 @@
 {
   "title": "ui",
   "root": true,
-  "pages": ["---Introduction---", "index", "setup", "---Components---", "..."]
+  "pages": [
+    "---Introduction---",
+    "index",
+    "setup",
+    "---Primitives---",
+    "...primitives",
+    "---Components---",
+    "..."
+  ]
 }

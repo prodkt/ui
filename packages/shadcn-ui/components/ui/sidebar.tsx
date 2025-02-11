@@ -4,18 +4,18 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
 import { useIsMobile } from "@repo/shadcn-ui/hooks/use-mobile"
-import { cn } from "@repo/shadcn-ui/lib/utils"
-import { Button } from "@repo/shadcn-ui/components/ui/button"
-import { Input } from "@repo/shadcn-ui/components/ui/input"
-import { Separator } from "@repo/shadcn-ui/components/ui/separator"
-import { Sheet, SheetContent } from "@repo/shadcn-ui/components/ui/sheet"
-import { Skeleton } from "@repo/shadcn-ui/components/ui/skeleton"
+import { cn } from '@/lib/utils';
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Separator } from "@/components/ui/separator"
+import { Sheet, SheetContent } from "@/components/ui/sheet"
+import { Skeleton } from "@/components/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@repo/shadcn-ui/components/ui/tooltip"
+} from "@/components/ui/tooltip"
 import { ViewVerticalIcon } from "@radix-ui/react-icons"
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
