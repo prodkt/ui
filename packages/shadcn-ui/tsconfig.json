@@ -9,7 +9,9 @@
     ],
     "paths": {
       "@repo/shadcn-ui/*": ["./*"],
-      "@repo/*": ["../*"]
+      "@repo/*": ["../*"],
+      "@/lib/*": ["lib/*"],
+      "@/components/*": ["components/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

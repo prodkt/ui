@@ -5,13 +5,22 @@ import path, { join } from 'node:path';
 const cwd = process.cwd();
 const packagesPath = join(cwd, 'packages');
 const packagesDir = readdirSync(packagesPath, { withFileTypes: true });
-const internalPackages = ['tailwind-config', 'shadcn-ui', 'typescript-config'];
+const internalPackages = ['tailwind-config', 'typescript-config', 'shadcn-ui'];
 
+// Get both regular packages and primitive components
 const packages = packagesDir
   .filter((dir) => dir.isDirectory() && !internalPackages.includes(dir.name))
   .map((dir) => dir.name);
 
+const primitivesPath = join(cwd, 'packages/shadcn-ui/components/ui');
+const primitiveComponents = readdirSync(primitivesPath)
+  .filter((file) => file.endsWith('.tsx'))
+  .map((file) => file.replace('.tsx', ''));
+
 const PUBLIC_FOLDER_BASE_PATH = 'apps/docs/public/registry';
+
+// Add constant for primitive registry path
+const PRIMITIVE_REGISTRY_PATH = 'apps/docs/public/registry/primitive';
 
 const writeFileRecursive = async (filePath: string, data: string) => {
   const dir = path.dirname(filePath);
@@ -29,7 +38,6 @@ const buildRegistry = async (pkg: string) => {
   const dependencies = Object.keys(packageJson.dependencies).filter(
     (dep) => !['react', 'react-dom', '@repo/shadcn-ui'].includes(dep)
   );
-
   const devDependencies = Object.keys(packageJson.devDependencies).filter(
     (dep) =>
       ![
@@ -76,9 +84,81 @@ const buildRegistry = async (pkg: string) => {
   await writeFileRecursive(jsonPath, json);
 };
 
+const buildPrimitiveRegistry = async (componentName: string) => {
+  const primitiveContentPath = join(
+    cwd,
+    'packages/shadcn-ui/components/ui',
+    `${componentName}.tsx`
+  );
+  const primitiveContent = await fs.readFile(primitiveContentPath, 'utf-8');
+
+  // Get registry dependencies (other UI components used)
+  const registryDependencies = (
+    primitiveContent.match(/@\/components\/ui\/([a-z-]+)/g) || []
+  )
+    .map((path) => path.split('/').pop())
+    .filter((name): name is string => !!name);
+
+  // Get external package dependencies, excluding internal and React dependencies
+  const importLines =
+    primitiveContent.match(/^import.*from.*["'].*["']/gm) || [];
+  const dependencies = importLines
+    .map((line) => {
+      const match = line.match(/from\s+["']([^"']+)["']/);
+      if (!match) return null;
+      const dep = match[1];
+
+      // Only include external package dependencies
+      if (
+        dep.startsWith('@radix-ui/') ||
+        dep === 'react-day-picker' ||
+        dep === 'date-fns' ||
+        dep === 'lucide-react' ||
+        (dep.startsWith('@') &&
+          !dep.startsWith('@/') &&
+          !dep.startsWith('@repo/'))
+      ) {
+        return dep;
+      }
+      return null;
+    })
+    .filter((dep): dep is string => !!dep);
+
+  const json = JSON.stringify(
+    {
+      $schema: 'https://ui.shadcn.com/schema/registry.json',
+      homepage: `https://www.prodkt.cloud/${componentName}`,
+      name: componentName,
+      type: 'registry:ui',
+      author: 'Bryan Funk <technology@prodkt.cloud>',
+      registryDependencies,
+      dependencies: [...new Set(dependencies)],
+      devDependencies: [],
+      files: [
+        {
+          type: 'registry:ui',
+          path: `${componentName}.tsx`,
+          content: primitiveContent,
+          target: `components/ui/${componentName}.tsx`,
+        },
+      ],
+    },
+    null,
+    2
+  );
+  const jsonPath = join(PRIMITIVE_REGISTRY_PATH, `${componentName}.json`);
+  await writeFileRecursive(jsonPath, json);
+};
+
 const main = async () => {
+  // Build registry for packages
   for (const pkg of packages) {
     await buildRegistry(pkg);
+  }
+
+  // Build registry for primitive components
+  for (const component of primitiveComponents) {
+    await buildPrimitiveRegistry(component);
   }
 };
 

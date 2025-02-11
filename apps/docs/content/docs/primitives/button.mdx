@@ -1,0 +1,116 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+featured: false
+icon: MousePointerClick
+component: true
+---
+
+import { AutoTypeTable } from 'fumadocs-typescript/ui';
+
+<PoweredBy packages={[
+  { name: 'Lucide', url: 'https://lucide.dev/' },
+  { name: 'Shadcn', url: 'https://ui.shadcn.com/' },
+]} />
+
+<Preview dependencies={{ "lucide-react": "^0.475.0" }} shadcn name="button" code={`'use client';
+
+import {
+  Button,
+} from '@/components/ui/prodkt-ui/button';
+import { ArrowRightIcon, Loader2Icon, SendIcon } from "lucide-react"
+
+const Example = () => (
+    <div className="flex flex-col gap-4 p-8">
+      <div className="grid grid-cols-4 place-items-center place-content-center items-center justify-center gap-4">
+        <Button>Button</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="destructive">Destructive</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="link">Link</Button>
+        <Button variant="outline">
+          <SendIcon /> Send
+        </Button>
+        <Button variant="outline">
+          Learn More <ArrowRightIcon />
+        </Button>
+        <Button disabled variant="outline">
+          <Loader2Icon className="animate-spin" />
+          Please wait
+        </Button>
+      </div>
+      <div className="grid grid-cols-4 place-items-center place-content-center items-center justify-center gap-4">
+        <Button size="sm">Small</Button>
+        <Button variant="outline" size="sm">
+          Outline
+        </Button>
+        <Button variant="ghost" size="sm">
+          Ghost
+        </Button>
+        <Button variant="destructive" size="sm">
+          Destructive
+        </Button>
+        <Button variant="secondary" size="sm">
+          Secondary
+        </Button>
+        <Button variant="link" size="sm">
+          Link
+        </Button>
+        <Button variant="outline" size="sm">
+          <SendIcon /> Send
+        </Button>
+        <Button variant="outline" size="sm">
+          Learn More <ArrowRightIcon />
+        </Button>
+        <Button disabled size="sm" variant="outline">
+          <Loader2Icon className="animate-spin" />
+          Please wait
+        </Button>
+      </div>
+      <div className="grid grid-cols-4 place-items-center place-content-center items-center justify-center gap-4">
+        <Button size="lg">Large</Button>
+        <Button variant="outline" size="lg">
+          Outline
+        </Button>
+        <Button variant="ghost" size="lg">
+          Ghost
+        </Button>
+        <Button variant="destructive" size="lg">
+          Destructive
+        </Button>
+        <Button variant="secondary" size="lg">
+          Secondary
+        </Button>
+        <Button variant="link" size="lg">
+          Link
+        </Button>
+        <Button variant="outline" size="lg">
+          <SendIcon /> Send
+        </Button>
+        <Button variant="outline" size="lg">
+          Learn More <ArrowRightIcon />
+        </Button>
+        <Button disabled size="lg" variant="outline">
+          <Loader2Icon className="animate-spin" />
+          Please wait
+        </Button>
+      </div>
+    </div>
+);
+
+export default Example;`} />
+
+## Installation
+
+<Installer packageName="button" />
+
+## Props
+
+The announcement is made up of the following subcomponents:
+
+### Button
+
+The `Button` component is used to display a button.
+
+<AutoTypeTable path="node_modules/@repo/shadcn-ui/components/ui/button.tsx" name="ButtonProps" />

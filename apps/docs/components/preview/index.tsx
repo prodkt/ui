@@ -25,6 +25,7 @@ import { utils } from './utils';
 type PreviewProps = {
   name: string;
   code: string;
+  shadcn?: boolean;
   dependencies?: Record<string, string>;
 };
 
@@ -43,13 +44,21 @@ export const Preview = async ({
   name,
   code,
   dependencies: demoDependencies,
+  shadcn,
 }: PreviewProps) => {
-  const registry = (await import(`../../public/registry/${name}.json`)) as {
-    dependencies?: Record<string, string>;
-    devDependencies?: Record<string, string>;
-    registryDependencies?: Record<string, string>;
-    files?: { content: string }[];
-  };
+  const registry = shadcn
+    ? ((await import(`../../public/registry/primitive/${name}.json`)) as {
+        dependencies?: Record<string, string>;
+        devDependencies?: Record<string, string>;
+        registryDependencies?: Record<string, string>;
+        files?: { content: string }[];
+      })
+    : ((await import(`../../public/registry/${name}.json`)) as {
+        dependencies?: Record<string, string>;
+        devDependencies?: Record<string, string>;
+        registryDependencies?: Record<string, string>;
+        files?: { content: string }[];
+      });
 
   const dependencies: Record<string, string> = {};
   const devDependencies: Record<string, string> = {};
