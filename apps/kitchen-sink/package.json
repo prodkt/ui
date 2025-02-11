@@ -1,0 +1,47 @@
+{
+  "name": "kitchen-sink",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@repo/announcement": "workspace:*",
+    "@repo/calendar": "workspace:*",
+    "@repo/code-block": "workspace:*",
+    "@repo/color-picker": "workspace:*",
+    "@repo/dialog-stack": "workspace:*",
+    "@repo/dropzone": "workspace:*",
+    "@repo/gantt": "workspace:*",
+    "@repo/kanban": "workspace:*",
+    "@repo/list": "workspace:*",
+    "@repo/marquee": "workspace:*",
+    "@repo/sandbox": "workspace:*",
+    "@repo/shadcn-ui": "workspace:*",
+    "@repo/snippet": "workspace:*",
+    "@repo/spinner": "workspace:*",
+    "@repo/table": "workspace:*",
+    "@repo/tags": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/vite": "^4.0.6",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "astro": "^5.2.5",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.475.0",
+    "postcss": "^8.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.0",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}

@@ -5,7 +5,8 @@
     "ignore": [
       "packages/shadcn-ui/components/ui/**",
       "packages/shadcn-ui/lib/**",
-      "packages/shadcn-ui/hooks/**"
+      "packages/shadcn-ui/hooks/**",
+      "**/*.astro"
     ]
   }
 }

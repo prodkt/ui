@@ -3,6 +3,7 @@
     "biomejs.biome",
     "bradlc.vscode-tailwindcss",
     "Prisma.prisma",
+    "astro-build.astro-vscode",
     "unifiedjs.vscode-mdx",
     "mikestead.dotenv",
     "christian-kohler.npm-intellisense"

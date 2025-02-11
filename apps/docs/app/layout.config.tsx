@@ -1,10 +1,10 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import { GithubIcon } from 'lucide-react';
-import {LogoUi} from './logo';
+import { UiLogo } from './logo';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: <LogoUi className="h-8 w-auto" />,
+    title: <UiLogo className="h-4 w-auto max-w-full" />,
   },
   links: [
     {

@@ -1,4 +1,4 @@
-@import '@repo/tailwind-config/globals.css';
+@import '../tailwind-config/globals.css';
 
 
 @layer base {
