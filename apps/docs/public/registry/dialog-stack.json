@@ -7,6 +7,7 @@
   "registryDependencies": [],
   "dependencies": [
     "@radix-ui/react-portal",
+    "@radix-ui/react-use-controllable-state",
     "lucide-react"
   ],
   "devDependencies": [],

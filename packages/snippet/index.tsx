@@ -29,7 +29,7 @@ export type SnippetHeaderProps = HTMLAttributes<HTMLDivElement>;
 export const SnippetHeader = ({ className, ...props }: SnippetHeaderProps) => (
   <div
     className={cn(
-      'flex flex-row items-center justify-between border-b bg-secondary p-1',
+      'flex flex-row items-center justify-between gap-x-1 border-b bg-secondary p-1',
       className
     )}
     {...props}
@@ -103,7 +103,10 @@ export const SnippetTabsTrigger = ({
   className,
   ...props
 }: SnippetTabsTriggerProps) => (
-  <TabsTrigger className={cn('gap-1.5 border !border-muted-foreground/10', className)} {...props} />
+  <TabsTrigger
+    className={cn('!border-muted-foreground/10 gap-x-1.5 border', className)}
+    {...props}
+  />
 );
 
 export type SnippetTabsContentProps = ComponentProps<typeof TabsContent>;

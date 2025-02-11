@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 /*
 * global.css
 *
@@ -5,7 +6,6 @@
  */
 
 /* Tailwind CSS */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import 'tailwindcss';
 
 /* local styles - update the below if you add a new style */
@@ -22,6 +22,8 @@
  
 /* plugins - update the below if you add a new plugin */
 @plugin "tailwindcss-animate";
+@plugin 'tailwind-scrollbar-hide';
+@plugin "./motion";
 
 /* content sources - update the below if you add a new path */
 @source "../**/*.{ts,tsx}";
@@ -82,6 +84,7 @@
 }
 
 
+@custom-variant dark (&:is(.dark *));
 /* variants - update the below if you add a new variant */
 @variant dark (&:where(.dark, .dark *, .dark-theme, .dark .themes-wrapper, .dark [data-chart]));
 

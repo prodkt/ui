@@ -1,0 +1,15 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import { Example as CodeBlockExample } from '../components/codeblock';
+import { Example as GanttExample } from '../components/gantt';
+---
+
+<Layout>
+	<Welcome>
+		<CodeBlockExample client:visible />
+		<div class="container mx-auto h-[50dvh] !rounded-2xl">
+			<GanttExample client:visible />
+		</div>
+	</Welcome>
+</Layout>
