@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "tailwind-merge": "^3.0.1",
+    "@radix-ui/colors": "^3.0.0",
     "tailwind-scrollbar-hide": "^2.0.0",
     "tailwindcss-animate": "^1.0.7"
   },

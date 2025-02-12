@@ -1,0 +1,254 @@
+
+@utility radial-mask-01 {
+  --hdr-gradient: radial-gradient(
+    farthest-side circle at 50% 5% in oklab,
+    oklch(100% 0 360) 0%,
+    45%,
+    transparent 76% 99%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-side circle at 50% 5%,
+    #fff 0%,
+    45%,
+    transparent 76% 99%
+  );
+
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-02 {
+  --hdr-gradient: radial-gradient(
+    farthest-corner circle at 50% -58% in oklab,
+    oklch(100% 0 360) 0%,
+    85%,
+    transparent 100% 0%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-corner circle at 50% -58%,
+    #fff 0%,
+    85%,
+    #000 100% 0%
+  );
+
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-03 {
+  --hdr-gradient: radial-gradient(
+    closest-side ellipse at 50% 50% in oklab,
+    oklch(100% 0 360) 0%,
+    transparent 100% 0%
+  );
+  --sdr-gradient: radial-gradient(
+    closest-side ellipse at 50% 50%,
+    #fff 0%,
+    #000 100% 0%
+  );
+
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-04 {
+  --hdr-gradient: radial-gradient(
+    farthest-side circle at 0% 100% in oklab,
+    oklch(0% 0 0) 50% 50%,
+    90%,
+    oklch(0% 0 0 / 0%) 115% 115%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-side circle at 0% 100%,
+    #000 50% 50%,
+    90%,
+    #0000 115% 115%
+  );
+
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-05 {
+  --hdr-gradient: radial-gradient(
+    farthest-side circle at 18% 91% in oklab,
+    oklch(100% 0 350) -10% -10%,
+    33%,
+    #00000000 92% 92%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-side circle at 18% 91%,
+    #fff -10% -10%,
+    33%,
+    #00000000 92% 92%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 200%;
+}
+
+@utility radial-mask-06 {
+  --hdr-gradient: conic-gradient(
+    from 176deg at -5% 69% in oklab,
+    oklch(100% 0 350) 21% 21%,
+    67%,
+    #00000000 81% 81%
+  );
+  --sdr-gradient: conic-gradient(
+    from 176deg at -5% 69%,
+    #fff 21% 21%,
+    67%,
+    #00000000 81% 81%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 200%;
+}
+
+@utility radial-mask-07 {
+  --hdr-gradient: radial-gradient(
+    closest-side ellipse at 50% 36% in oklab,
+    oklch(100% 0 0) 26% 26%,
+    132%,
+    oklch(0% 0 0) 180% 180%
+  );
+  --sdr-gradient: radial-gradient(
+    closest-side ellipse at 50% 36%,
+    #fff 26% 26%,
+    132%,
+    #000 180% 180%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 200%;
+}
+
+@utility radial-mask-08 {
+  --hdr-gradient: radial-gradient(
+    farthest-corner circle at 50% -14% in oklab,
+    oklch(0% 0 360 / 0%) 34% 0%,
+    67%,
+    oklch(0% 0 360) 100%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-corner circle at 50% -14%,
+    #0000 34% 0%,
+    67%,
+    #000 100%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 200%;
+}
+
+@utility radial-mask-09 {
+  --hdr-gradient: radial-gradient(
+    farthest-corner circle at 50% 50% in oklab,
+    var(--border-base) 0%,
+    10%,
+    #00000000 0% 20%,
+    var(--border-base) 0% 35%,
+    #00000000 0% 55%,
+    var(--border-base) 0% 70%,
+    #00000000 0% 80%,
+    var(--border-base) 0% 100%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-corner circle at 50% 50%,
+    var(--border-base) 0%,
+    10%,
+    #00000000 0% 20%,
+    var(--border-base) 0% 35%,
+    #00000000 0% 55%,
+    var(--border-base) 0% 70%,
+    #00000000 0% 80%,
+    var(--border-base) 0% 100%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-10 {
+  --hdr-gradient: radial-gradient(
+    farthest-corner circle at 50% 100% in oklab,
+    oklch(100% 0 222) 0%,
+    oklch(0% 0 0 / 0%) 100%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-corner circle at 50% 100%,
+    #fff 0%,
+    #0000 100%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-11 {
+  --hdr-gradient: radial-gradient(
+    farthest-corner ellipse at 50% 100% in oklab,
+    oklch(100% 0 222) 0%,
+    oklch(0% 0 0 / 0%) 100%
+  );
+  --sdr-gradient: radial-gradient(
+    farthest-corner ellipse at 50% 100%,
+    #fff 0%,
+    #0000 100%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+
+@utility radial-mask-12 {
+  --hdr-gradient: conic-gradient(
+    from 90deg at 36% 100% in oklab,
+    oklch(100% 0 222) 0%,
+    69%,
+    oklch(0% 0 0 / 0%) 100%
+  );
+  --sdr-gradient: conic-gradient(
+    from 90deg at 36% 100%,
+    #fff 0%,
+    69%,
+    #0000 100%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}
+@utility radial-mask-13 {
+  --hdr-gradient: radial-gradient(
+    closest-side ellipse at 50% 50% in oklab,
+    oklch(100% 0 0 / 0%) 84% 84%,
+    94%,
+    oklch(0% 0 0) 100%
+  );
+  --sdr-gradient: radial-gradient(
+    closest-side ellipse at 50% 50%,
+    #fff0 84% 84%,
+    94%,
+    #000 100%
+  );
+  mask-image: var(--hdr-gradient);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100%;
+}

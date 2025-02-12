@@ -1,4 +1,5 @@
-@import '@repo/tailwind-config/globals.css';
+@import "@repo/tailwind-config/globals.css";
+@source '@repo/tailwind-config/globals.css';
 
 .dark * {
   @apply border-foreground/15;

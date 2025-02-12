@@ -18,7 +18,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => (
   <html lang="en" suppressHydrationWarning>
     <body className={cn('flex min-h-screen flex-col', fonts)}>
-      <ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <RootProvider>
           <TooltipProvider>{children}</TooltipProvider>
           <Toaster />
