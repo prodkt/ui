@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 /*
 * global.css
 *
@@ -6,28 +6,30 @@
  */
 
 /* Tailwind CSS */
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* local styles - update the below if you add a new style */
-@import './theme.css';
-@import './theme.utilities.css';
-@import './shadcn-ui.css';
-@import './markdoc.css';
-@import './prodkt.css';
+@import "./radix.css";
+@import "./radix-dark.css";
+@import "./prodkt.css";
+@import "./theme.css";
+@import "./theme.utilities.css";
+@import "./shadcn-ui.css";
+@import "./markdoc.css";
+@import "./masks.css";
 
 /* docs styles */
-@import './../../apps/docs/node_modules/fumadocs-ui/css/neutral.css';
-@import './../../apps/docs/node_modules/fumadocs-ui/css/preset.css';
+@import "./../../apps/docs/node_modules/fumadocs-ui/css/neutral.css";
+@import "./../../apps/docs/node_modules/fumadocs-ui/css/preset.css";
 @source './../../apps/docs/node_modules/fumadocs-ui/dist/**/*.js';
- 
+
 /* plugins - update the below if you add a new plugin */
 @plugin "tailwindcss-animate";
 @plugin 'tailwind-scrollbar-hide';
 @plugin "./motion";
 
 /* content sources - update the below if you add a new path */
-@source "../**/*.{ts,tsx}";
-
+@source "../**/*.{ts,tsx,mdx,astro}";
 
 @theme {
   --font-cal: var(--font-cal);
@@ -83,11 +85,9 @@
   }
 }
 
-
 @custom-variant dark (&:is(.dark *));
 /* variants - update the below if you add a new variant */
 @variant dark (&:where(.dark, .dark *, .dark-theme, .dark .themes-wrapper, .dark [data-chart]));
-
 
 @layer base {
   body {
@@ -106,7 +106,6 @@
   textarea::placeholder {
     color: theme(--color-muted-foreground);
   }
-
 }
 
 /* DM Sans Variable Font Classes */

@@ -49,7 +49,7 @@ export default async function Page(props: {
           <DocsBody
             className={cn(
               'prose-h2:tracking-tighter',
-              'prose-a:border-fd-primary prose-a:border-b-px prose-a:font-semibold prose-a:text-foreground prose-a:decoration-none prose-a:transition-all prose-a:border-b-2'
+              'prose-a:border-fd-primary prose-a:border-b-2 prose-a:border-b-px prose-a:font-semibold prose-a:text-foreground prose-a:decoration-none prose-a:transition-all'
             )}
           >
             <MDX components={{ ...defaultMdxComponents, ...components }} />
@@ -89,3 +89,30 @@ export async function generateMetadata(props: {
     },
   };
 }
+
+// return (
+//     <div className="relative h-auto min-h-dvh w-full bg-background md:mt-4 md:rounded-tl-2xl md:border-t md:border-l">
+//       <Header />
+//       <div className="relative z-10 grid xl:grid-cols-[1fr_268px]">
+//         <DocsPage
+//           toc={page.data.toc}
+//           full={page.data.full}
+//           tableOfContent={{ style: 'clerk' }}
+//         >
+//           <DocsTitle className="tracking-tighter lg:text-4xl">
+//             {page.data.title}
+//           </DocsTitle>
+//           <DocsDescription>{page.data.description}</DocsDescription>
+//           <DocsBody
+//             className={cn(
+//               '!pb-80 prose-h2:tracking-tighter ',
+//               'prose-a:border-fd-primary prose-a:border-b-2 prose-a:border-b-px prose-a:font-semibold prose-a:text-foreground prose-a:decoration-none prose-a:transition-all'
+//             )}
+//           >
+//             <MDX components={{ ...defaultMdxComponents, ...components }} />
+//           </DocsBody>
+//         </DocsPage>
+//       </div>
+//     </div>
+//   );
+// }
