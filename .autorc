@@ -1,11 +1,7 @@
 {
-  "plugins": [
-    "npm",
-    "first-time-contributor",
-    "released"
-  ],
+  "plugins": ["npm", "first-time-contributor", "released"],
   "owner": "prodkt",
-  "repo": "cloud",
+  "repo": "ui",
   "name": "Bryan Funk",
   "email": "technology@prodkt.cloud"
 }
