@@ -48,15 +48,62 @@ const parseContent = (content: string) => {
   return content.replace(/@\/registry\/new-york\/ui\//g, '@/components/ui/');
 };
 
-const componentCache = new Map<string, ComponentModule>();
+// Pre-load and cache all primitive components at module level
+const PRIMITIVE_COMPONENTS = new Map<string, ComponentModule>();
+const LOGOS_COMPONENTS = new Map<string, ComponentModule>();
 
-const loadComponent = async (path: string): Promise<ComponentModule> => {
-  if (componentCache.has(path)) {
-    return componentCache.get(path)!;
+// Initialize the cache
+const initializeCache = async () => {
+  try {
+    const primitiveContext = require.context(
+      '../../public/registry/primitive',
+      false,
+      /\.json$/
+    );
+
+    for (const key of primitiveContext.keys()) {
+      const name = key.replace(/^\.\/(.*)\.json$/, '$1');
+      PRIMITIVE_COMPONENTS.set(name, primitiveContext(key));
+    }
+
+    const logosContext = require.context(
+      '../../public/registry/logos',
+      false,
+      /\.json$/
+    );
+
+    for (const key of logosContext.keys()) {
+      const name = key.replace(/^\.\/(.*)\.json$/, '$1');
+      LOGOS_COMPONENTS.set(name, logosContext(key));
+    }
+  } catch (error) {
+    console.warn('Failed to initialize component cache:', error);
   }
-  const mod = (await import(path)) as ComponentModule;
-  componentCache.set(path, mod);
-  return mod;
+};
+
+// Initialize cache
+initializeCache();
+
+const loadComponent = async (
+  component: string,
+  type: 'primitive' | 'logos'
+): Promise<ComponentModule | undefined> => {
+  const cache = type === 'primitive' ? PRIMITIVE_COMPONENTS : LOGOS_COMPONENTS;
+
+  if (cache.has(component)) {
+    return cache.get(component);
+  }
+
+  try {
+    const mod = (await import(
+      `../../public/registry/${type}/${component}.json`
+    )) as ComponentModule;
+    cache.set(component, mod);
+    return mod;
+  } catch (error) {
+    // Silently fail for missing modules
+    return undefined;
+  }
 };
 
 export const Preview = async ({
@@ -110,36 +157,29 @@ export const Preview = async ({
 
       await Promise.all(
         components.map(async (component) => {
-          try {
-            const mod = await loadComponent(
-              `../../public/registry/logos/${component}.json`
-            );
+          const mod = await loadComponent(component, 'logos');
+          if (!mod) return;
 
-            files[`/components/ui/logos/${mod.name}.tsx`] = parseContent(
-              mod.files?.[0]?.content ?? ''
-            );
+          files[`/components/ui/logos/${mod.name}.tsx`] = parseContent(
+            mod.files?.[0]?.content ?? ''
+          );
 
-            if (mod.dependencies) {
-              for (const [, dep] of Object.entries(mod.dependencies)) {
-                const { name, version } = parseDependencyVersion(dep);
-                dependencies[name] = version;
-              }
+          if (mod.dependencies) {
+            for (const [, dep] of Object.entries(mod.dependencies)) {
+              const { name, version } = parseDependencyVersion(dep);
+              dependencies[name] = version;
             }
+          }
 
-            if (mod.devDependencies) {
-              for (const [, dep] of Object.entries(mod.devDependencies)) {
-                const { name, version } = parseDependencyVersion(dep);
-                devDependencies[name] = version;
-              }
+          if (mod.devDependencies) {
+            for (const [, dep] of Object.entries(mod.devDependencies)) {
+              const { name, version } = parseDependencyVersion(dep);
+              devDependencies[name] = version;
             }
+          }
 
-            if (mod.files?.[0]?.content) {
-              await parseLogosComponents(mod.files[0].content);
-            }
-          } catch (error) {
-            if (!component.includes('all')) {
-              console.warn(`Failed to load logos component: ${component}`);
-            }
+          if (mod.files?.[0]?.content) {
+            await parseLogosComponents(mod.files[0].content);
           }
         })
       );
@@ -163,43 +203,29 @@ export const Preview = async ({
 
       await Promise.all(
         components.map(async (component) => {
-          try {
-            const mod = await loadComponent(
-              `../../public/registry/primitive/${component}.json`
-            );
+          const mod = await loadComponent(component, 'primitive');
+          if (!mod) return;
 
-            files[`/components/ui/${mod.name}.tsx`] = parseContent(
-              mod.files?.[0]?.content ?? ''
-            );
+          files[`/components/ui/${mod.name}.tsx`] = parseContent(
+            mod.files?.[0]?.content ?? ''
+          );
 
-            if (mod.dependencies) {
-              for (const [, dep] of Object.entries(mod.dependencies)) {
-                const { name, version } = parseDependencyVersion(dep);
-                dependencies[name] = version;
-              }
+          if (mod.dependencies) {
+            for (const [, dep] of Object.entries(mod.dependencies)) {
+              const { name, version } = parseDependencyVersion(dep);
+              dependencies[name] = version;
             }
+          }
 
-            if (mod.devDependencies) {
-              for (const [, dep] of Object.entries(mod.devDependencies)) {
-                const { name, version } = parseDependencyVersion(dep);
-                devDependencies[name] = version;
-              }
+          if (mod.devDependencies) {
+            for (const [, dep] of Object.entries(mod.devDependencies)) {
+              const { name, version } = parseDependencyVersion(dep);
+              devDependencies[name] = version;
             }
+          }
 
-            if (mod.files?.[0]?.content) {
-              await parseShadcnComponents(mod.files[0].content);
-            }
-          } catch (error) {
-            if (
-              error instanceof Error &&
-              !error.message.includes('Cannot find module')
-            ) {
-              console.warn(
-                `Failed to load shadcn component: ${component}${
-                  error instanceof Error ? ` (${error.message})` : ''
-                }`
-              );
-            }
+          if (mod.files?.[0]?.content) {
+            await parseShadcnComponents(mod.files[0].content);
           }
         })
       );
