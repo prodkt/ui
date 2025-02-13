@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_vercel",
+  "name": "logomark_vercel",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_vercel.tsx",
+      "content": "import type { SVGProps } from \"react\"\n\nexport const VercelLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={256}\n    height={222}\n    fill=\"currentColor\"\n    viewBox=\"0 0 256 222\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    preserveAspectRatio=\"xMidYMid\"\n    {...props}\n  >\n    <title>Vercel</title>\n    <path d=\"m128 0 128 221.705H0z\" />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_vercel.tsx"
+    }
+  ]
+}

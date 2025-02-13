@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_clerk",
+  "name": "logomark_clerk",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_clerk.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const ClerkLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={25}\n    height={25}\n    viewBox=\"0 0 25 25\"\n    fill=\"none\"\n    {...props}\n  >\n    <g clipPath=\"url(#clerk-a)\">\n      <path\n        fill=\"url(#clerk-b)\"\n        d=\"m19.616 3.53-2.88 2.88a.571.571 0 0 1-.701.084 6.854 6.854 0 0 0-10.39 5.647 6.867 6.867 0 0 0 .979 3.763.571.571 0 0 1-.084.7l-2.88 2.88a.57.57 0 0 1-.865-.063A11.994 11.994 0 0 1 19.551 2.663a.57.57 0 0 1 .065.866Z\"\n      />\n      <path\n        fill=\"#1F0256\"\n        d=\"m19.613 21.197-2.88-2.88a.571.571 0 0 0-.7-.084 6.854 6.854 0 0 1-7.081 0 .571.571 0 0 0-.7.084l-2.881 2.88a.57.57 0 0 0 .062.876 11.994 11.994 0 0 0 14.114 0 .571.571 0 0 0 .066-.876Z\"\n      />\n      <path\n        fill=\"#fff\"\n        d=\"m19.613 21.197-2.88-2.88a.571.571 0 0 0-.7-.084 6.854 6.854 0 0 1-7.081 0 .571.571 0 0 0-.7.084l-2.881 2.88a.57.57 0 0 0 .062.876 11.994 11.994 0 0 0 14.114 0 .571.571 0 0 0 .066-.876Z\"\n      />\n      <path\n        fill=\"#1F0256\"\n        d=\"M12.497 15.79a3.427 3.427 0 1 0 0-6.853 3.427 3.427 0 0 0 0 6.854Z\"\n      />\n      <path\n        fill=\"#fff\"\n        d=\"M12.497 15.79a3.427 3.427 0 1 0 0-6.853 3.427 3.427 0 0 0 0 6.854Z\"\n      />\n    </g>\n    <defs>\n      <linearGradient\n        id=\"clerk-b\"\n        x1={16.909}\n        x2={-7.385}\n        y1={-1.39}\n        y2={22.905}\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"#17CCFC\" />\n        <stop offset={0.5} stopColor=\"#5D31FF\" />\n        <stop offset={1} stopColor=\"#F35AFF\" />\n      </linearGradient>\n      <clipPath id=\"clerk-a\">\n        <path fill=\"#fff\" d=\"M.5.368h24v24H.5z\" />\n      </clipPath>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_clerk.tsx"
+    }
+  ]
+}

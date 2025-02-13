@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_black-box",
+  "name": "logomark_black-box",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_black-box.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\nimport clsx from \"clsx\"\n\nexport const BlackBoxLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={64}\n    height={64}\n    viewBox=\"0 0 64 64\"\n    fill=\"none\"\n    {...props}\n    className={clsx(\n      props.className,\n      \"dark:text-refine-purple-alt text-refine-purple\"\n    )}\n  >\n    <rect\n      width={64}\n      height={64}\n      fill=\"url(#black-box-a)\"\n      fillOpacity={0.4}\n      rx={16}\n    />\n    <rect\n      width={63}\n      height={63}\n      x={0.5}\n      y={0.5}\n      stroke=\"url(#black-box-b)\"\n      strokeOpacity={0.5}\n      rx={15.5}\n    />\n    <path\n      stroke=\"currentColor\"\n      strokeLinecap=\"round\"\n      strokeWidth={2}\n      d=\"M30 47h4M17 32c0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15 0 5.928-3.438 11.052-8.43 13.488a.247.247 0 0 1-.331-.119l-3.595-7.704a.258.258 0 0 1 .118-.337 6 6 0 1 0-5.524 0 .258.258 0 0 1 .118.337l-3.595 7.704a.247.247 0 0 1-.332.12C20.44 43.051 17 37.927 17 32Z\"\n    />\n    <defs>\n      <radialGradient\n        id=\"black-box-a\"\n        cx={0}\n        cy={0}\n        r={1}\n        gradientTransform=\"rotate(45) scale(90.5097)\"\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"currentColor\" />\n        <stop offset={1} stopColor=\"currentColor\" stopOpacity={0.25} />\n      </radialGradient>\n      <radialGradient\n        id=\"black-box-b\"\n        cx={0}\n        cy={0}\n        r={1}\n        gradientTransform=\"rotate(45) scale(90.5097)\"\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"currentColor\" />\n        <stop offset={0.5} stopColor=\"currentColor\" stopOpacity={0} />\n        <stop offset={1} stopColor=\"currentColor\" stopOpacity={0.25} />\n      </radialGradient>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_black-box.tsx"
+    }
+  ]
+}

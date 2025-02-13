@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_auth0",
+  "name": "logomark_auth0",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_auth0.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const Auth0Logomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={25}\n    height={25}\n    viewBox=\"0 0 25 25\"\n    fill=\"none\"\n    {...props}\n  >\n    <path\n      fill=\"#EB5424\"\n      d=\"m18.674 19.783-2.357-7.415 6.17-4.581h-7.63L12.498.368h7.63l2.36 7.418c1.367 4.3-.043 9.195-3.826 11.996l.011.001Zm-12.343 0 6.17 4.585 6.173-4.585-6.17-4.581-6.173 4.581Zm-3.814-12c-1.443 4.538.232 9.343 3.812 12.002v-.002l2.358-7.415-6.17-4.585 7.629.003L12.499.368H4.864L2.517 7.783Z\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_auth0.tsx"
+    }
+  ]
+}

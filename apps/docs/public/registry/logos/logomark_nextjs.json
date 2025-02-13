@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_nextjs",
+  "name": "logomark_nextjs",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_nextjs.tsx",
+      "content": "import * as React from \"react\"\nimport { SVGProps } from \"react\"\n\nexport const NextjsLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={256}\n    height={256}\n    viewBox=\"0 0 256 256\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    xmlnsXlink=\"http://www.w3.org/1999/xlink\"\n    {...props}\n  >\n    <defs>\n      <linearGradient\n        x1=\"55.633%\"\n        y1=\"56.385%\"\n        x2=\"83.228%\"\n        y2=\"96.08%\"\n        id=\"nextjs-logomark-c\"\n      >\n        <stop stopColor=\"currentColor\" offset=\"0%\" />\n        <stop stopColor=\"currentColor\" stopOpacity={0} offset=\"100%\" />\n      </linearGradient>\n      <linearGradient\n        x1=\"50%\"\n        y1=\"0%\"\n        x2=\"49.953%\"\n        y2=\"73.438%\"\n        id=\"nextjs-logomark-d\"\n      >\n        <stop stopColor=\"currentColor\" offset=\"0%\" />\n        <stop stopColor=\"currentColor\" stopOpacity={0} offset=\"100%\" />\n      </linearGradient>\n      <circle id=\"nextjs-logomark-a\" cx={128} cy={128} r={128} />\n    </defs>\n    <mask id=\"nextjs-logomark-b\" fill=\"currentColor\">\n      <use xlinkHref=\"#nextjs-logomark-a\" />\n    </mask>\n    <g mask=\"url(#nextjs-logomark-b)\">\n      <circle cx={128} cy={128} r={128} />\n      <path\n        d=\"M212.634 224.028 98.335 76.8H76.8v102.357h17.228V98.68L199.11 234.446a128.433 128.433 0 0 0 13.524-10.418Z\"\n        fill=\"url(#nextjs-logomark-c)\"\n      />\n      <path\n        fill=\"url(#nextjs-logomark-d)\"\n        d=\"M163.556 76.8h17.067v102.4h-17.067z\"\n      />\n    </g>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_nextjs.tsx"
+    }
+  ]
+}

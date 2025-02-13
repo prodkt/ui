@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_lit",
+  "name": "logomark_lit",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_lit.tsx",
+      "content": "import * as React from \"react\"\nimport { SVGProps } from \"react\"\n\nexport const LitLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={17}\n    height={20}\n    viewBox=\"0 0 17 20\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <g clipPath=\"url(#lit-logomark-a)\">\n      <g clipPath=\"url(#lit-logomark-b)\">\n        <path\n          d=\"M8.603.036 4.615 4.024v7.975L8.603 8.01V.036Zm0 7.975v7.975L12.59 12V4.024L8.603 8.01ZM12.59 12v7.975l3.988-3.988V8.011L12.59 12Zm-7.975 0L.628 8.01v7.975l3.987 3.988v-7.975Z\"\n          fill=\"currentColor\"\n        />\n      </g>\n    </g>\n    <defs>\n      <clipPath id=\"lit-logomark-a\">\n        <path\n          fill=\"currentColor\"\n          transform=\"translate(.415)\"\n          d=\"M0 0h16.17v20H0z\"\n        />\n      </clipPath>\n      <clipPath id=\"lit-logomark-b\">\n        <path\n          fill=\"currentColor\"\n          transform=\"translate(.415)\"\n          d=\"M0 0h16.17v20H0z\"\n        />\n      </clipPath>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_lit.tsx"
+    }
+  ]
+}

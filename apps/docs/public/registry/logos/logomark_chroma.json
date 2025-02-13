@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_chroma",
+  "name": "logomark_chroma",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_chroma.tsx",
+      "content": "import type { SVGProps } from \"react\"\n\nexport const ChromaLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={256}\n    height={164}\n    viewBox=\"0 0 256 164\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    preserveAspectRatio=\"xMidYMid\"\n    {...props}\n  >\n    <title>Chroma</title>\n    <ellipse fill=\"#FFDE2D\" cx={170.667} cy={81.92} rx={85.333} ry={81.92} />\n    <ellipse fill=\"#327EFF\" cx={85.333} cy={81.92} rx={85.333} ry={81.92} />\n    <path\n      d=\"M170.667 81.92c0 45.243-38.206 81.92-85.334 81.92V81.92h85.334Zm-85.334 0C85.333 36.677 123.538 0 170.667 0v81.92H85.333Z\"\n      fill=\"#FF6446\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_chroma.tsx"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_leveln",
+  "name": "logomark_leveln",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_leveln.tsx",
+      "content": "import * as React from \"react\"\nimport { SVGProps } from \"react\"\n\nexport const LevelnLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={162}\n    height={162}\n    viewBox=\"0 0 162 162\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <g filter=\"url(#leveln-logomark-a)\">\n      <path\n        d=\"M123.33 150.028c23.544-12.236 37.67-37.022 37.67-63.69V21.08C161 9.784 152.21 1 140.909 1H89.113C41.084 1 4.043 33.002 1.217 75.357c-4.395 60.552 58.702 107.927 122.113 74.671Z\"\n        fill=\"url(#leveln-logomark-b)\"\n      />\n    </g>\n    <path\n      d=\"M123.33 150.028c23.544-12.236 37.67-37.022 37.67-63.69V21.08C161 9.784 152.21 1 140.909 1H89.113C41.084 1 4.043 33.002 1.217 75.357c-4.395 60.552 58.702 107.927 122.113 74.671Z\"\n      stroke=\"var(--ruby-9)\"\n    />\n    <defs>\n      <radialGradient\n        id=\"leveln-logomark-b\"\n        cx={0}\n        cy={0}\n        r={1}\n        gradientUnits=\"userSpaceOnUse\"\n        gradientTransform=\"matrix(160.09956 -160.00626 107.84688 107.90977 .9 161.006)\"\n      >\n        <stop stopColor=\"var(--ruby-11)\" stopOpacity={0.996} />\n        <stop offset={0.267} stopColor=\"var(--ruby-12)\" />\n        <stop offset={0.804} stopColor=\"var(--ruby-9)\" />\n      </radialGradient>\n      <filter\n        id=\"leveln-logomark-a\"\n        x={0.5}\n        y={-9.5}\n        width={171}\n        height={171.001}\n        filterUnits=\"userSpaceOnUse\"\n        colorInterpolationFilters=\"sRGB\"\n      >\n        <feFlood floodOpacity={0} result=\"BackgroundImageFix\" />\n        <feBlend in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\" />\n        <feColorMatrix\n          in=\"SourceAlpha\"\n          values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"\n          result=\"hardAlpha\"\n        />\n        <feOffset dx={10} dy={-10} />\n        <feGaussianBlur stdDeviation={16} />\n        <feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2={-1} k3={1} />\n        <feColorMatrix values=\"0 0 0 0 0.92549 0 0 0 0 0.352941 0 0 0 0 0.447059 0 0 0 1 0\" />\n        <feBlend in2=\"shape\" result=\"effect1_innerShadow_434_18643\" />\n      </filter>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_leveln.tsx"
+    }
+  ]
+}

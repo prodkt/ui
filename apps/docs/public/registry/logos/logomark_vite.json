@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_vite",
+  "name": "logomark_vite",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_vite.tsx",
+      "content": "import type { SVGProps } from \"react\"\n\nexport const ViteLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={26}\n    height={25}\n    viewBox=\"0 0 26 25\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <title>Vite</title>\n    <g clipPath=\"url(#clip0_4533_14110)\">\n      <path\n        d=\"M24.58 4.502 13.65 24.048a.594.594 0 0 1-1.035.004L1.467 4.504a.594.594 0 0 1 .62-.879L13.03 5.581c.07.012.142.012.211 0l10.714-1.953c.494-.09.87.436.625.874Z\"\n        fill=\"url(#paint0_linear_4533_14110)\"\n      />\n      <path\n        d=\"m18.243 1.06-8.09 1.585a.297.297 0 0 0-.239.273l-.497 8.404a.297.297 0 0 0 .363.307l2.252-.52a.297.297 0 0 1 .358.35l-.67 3.276a.297.297 0 0 0 .378.344l1.391-.423a.297.297 0 0 1 .377.344l-1.063 5.147c-.067.322.362.497.54.221l.12-.184 6.59-13.154a.297.297 0 0 0-.321-.425l-2.318.447a.297.297 0 0 1-.342-.374l1.513-5.245a.297.297 0 0 0-.342-.373Z\"\n        fill=\"url(#paint1_linear_4533_14110)\"\n      />\n    </g>\n    <defs>\n      <linearGradient\n        id=\"paint0_linear_4533_14110\"\n        x1={1.195}\n        y1={2.926}\n        x2={14.799}\n        y2={21.402}\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"#41D1FF\" />\n        <stop offset={1} stopColor=\"#BD34FE\" />\n      </linearGradient>\n      <linearGradient\n        id=\"paint1_linear_4533_14110\"\n        x1={12.402}\n        y1={1.49}\n        x2={14.863}\n        y2={18.371}\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"#FFEA83\" />\n        <stop offset={0.083} stopColor=\"#FFDD35\" />\n        <stop offset={1} stopColor=\"#FFA800\" />\n      </linearGradient>\n      <clipPath id=\"clip0_4533_14110\">\n        <path\n          fill=\"currentColor\"\n          transform=\"translate(.839 .966)\"\n          d=\"M0 0h24.356v24H0z\"\n        />\n      </clipPath>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_vite.tsx"
+    }
+  ]
+}

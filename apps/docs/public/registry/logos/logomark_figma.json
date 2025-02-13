@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_figma",
+  "name": "logomark_figma",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_figma.tsx",
+      "content": "import type { SVGProps } from \"react\"\n\nexport const FigmaLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={256}\n    height={384}\n    viewBox=\"0 0 256 384\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    preserveAspectRatio=\"xMidYMid\"\n    {...props}\n  >\n    <title>Figma</title>\n    <path\n      d=\"M64 384c35.328 0 64-28.672 64-64v-64H64c-35.328 0-64 28.672-64 64s28.672 64 64 64Z\"\n      fill=\"#0ACF83\"\n    />\n    <path\n      d=\"M0 192c0-35.328 28.672-64 64-64h64v128H64c-35.328 0-64-28.672-64-64Z\"\n      fill=\"#A259FF\"\n    />\n    <path\n      d=\"M0 64C0 28.672 28.672 0 64 0h64v128H64C28.672 128 0 99.328 0 64Z\"\n      fill=\"#F24E1E\"\n    />\n    <path\n      d=\"M128 0h64c35.328 0 64 28.672 64 64s-28.672 64-64 64h-64V0Z\"\n      fill=\"#FF7262\"\n    />\n    <path\n      d=\"M256 192c0 35.328-28.672 64-64 64s-64-28.672-64-64 28.672-64 64-64 64 28.672 64 64Z\"\n      fill=\"#1ABCFE\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_figma.tsx"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_shadcn-ui",
+  "name": "logomark_shadcn-ui",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_shadcn-ui.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\nimport clsx from \"clsx\"\n\nexport const ShadCnUILogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={25}\n    height={24}\n    viewBox=\"0 0 25 24\"\n    fill=\"none\"\n    {...props}\n    className={clsx(props.className, \"dark:text-white text-gray-1000\")}\n  >\n    <path\n      stroke=\"currentColor\"\n      strokeLinecap=\"round\"\n      strokeLinejoin=\"round\"\n      strokeWidth={1.5}\n      d=\"m20 12-7.5 7.5M18.5 3.75 4.25 18\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_shadcn-ui.tsx"
+    }
+  ]
+}
