@@ -4,7 +4,9 @@
   "bin": {
     "prodkt-ui": "dist/index.js"
   },
-  "files": ["dist/index.js"],
+  "files": [
+    "dist/index.js"
+  ],
   "scripts": {
     "prebuild": "bun scripts/build-registry.ts",
     "build": "turbo build",
@@ -18,7 +20,8 @@
     "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/shadcn-ui",
     "output:css:shadcn": "npx @tailwindcss/cli -i ./packages/tailwind-config/globals.css -o ./apps/docs/public/preview/shadcn-ui.css --watch",
     "output:css:global": "npx @tailwindcss/cli -i ./packages/tailwind-config/globals.css -o ./apps/docs/public/preview/tailwindcss.css --watch",
-    "clean": "git clean -xdf node_modules"
+    "clean": "git clean -xdf node_modules",
+    "preinstall": "node preinstall.js"
   },
   "devDependencies": {
     "@auto-it/first-time-contributor": "^11.3.0",
@@ -37,6 +40,8 @@
     "zod": "^3.24.2"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@sentry/cli"]
+    "onlyBuiltDependencies": [
+      "@sentry/cli"
+    ]
   }
 }

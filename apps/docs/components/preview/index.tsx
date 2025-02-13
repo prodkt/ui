@@ -52,38 +52,6 @@ const parseContent = (content: string) => {
 const PRIMITIVE_COMPONENTS = new Map<string, ComponentModule>();
 const LOGOS_COMPONENTS = new Map<string, ComponentModule>();
 
-// Initialize the cache
-const initializeCache = async () => {
-  try {
-    const primitiveContext = require.context(
-      '../../public/registry/primitive',
-      false,
-      /\.json$/
-    );
-
-    for (const key of primitiveContext.keys()) {
-      const name = key.replace(/^\.\/(.*)\.json$/, '$1');
-      PRIMITIVE_COMPONENTS.set(name, primitiveContext(key));
-    }
-
-    const logosContext = require.context(
-      '../../public/registry/logos',
-      false,
-      /\.json$/
-    );
-
-    for (const key of logosContext.keys()) {
-      const name = key.replace(/^\.\/(.*)\.json$/, '$1');
-      LOGOS_COMPONENTS.set(name, logosContext(key));
-    }
-  } catch (error) {
-    console.warn('Failed to initialize component cache:', error);
-  }
-};
-
-// Initialize cache
-initializeCache();
-
 const loadComponent = async (
   component: string,
   type: 'primitive' | 'logos'
