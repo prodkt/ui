@@ -9,7 +9,7 @@ export const baseOptions: BaseLayoutProps = {
   links: [
     {
       text: 'GitHub',
-      url: 'https://github.com/prodkt/cloud',
+      url: 'https://github.com/prodkt/ui',
       icon: <GithubIcon />,
     },
   ],

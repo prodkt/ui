@@ -51,28 +51,37 @@ export const GET = async (request: NextRequest) => {
       <div tw="flex top-12 left-12 z-10">
         {/* biome-ignore lint/a11y/noSvgWithoutTitle: "satori" */}
         <svg
-          fill="none"
-          height={48}
-          viewBox="0 0 117 116"
           width={48}
+          height={48}
+          viewBox="0 0 48 48"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            clipRule="evenodd"
-            d="m29.8378 0h87.0002v29 58l-29.0002 29v-87h-87.000031zm-29.000031 95.7389v-37.7389h37.738831zm58.000031 20.2611h-37.249l37.249-37.2488z"
-            fill="#FFFFFF"
-            fillRule="evenodd"
+            d="M30.9397 48L17.0604 24H33.5158L47.3425 48H30.9397Z"
+            fill="#ffffff"
+          />
+          <path
+            d="M17.0603 24L30.9396 0H14.4842L0.657516 24H17.0603Z"
+            fill="#ffffff"
+          />
+          <ellipse
+            cx="7.9652"
+            cy="40.6683"
+            rx="7.30766"
+            ry="7.33187"
+            fill="#ffffff"
           />
         </svg>
       </div>
       <div
         tw="flex flex-col bottom-0 left-0 right-0 relative z-10 p-12"
-        style={{ fontFamily: 'Geist' }}
+        style={{ fontFamily: 'DM Sans' }}
       >
         <p tw="text-lg m-0 text-white/80 font-semibold">Prodkt UI</p>
         <h1
           tw="my-4 text-6xl font-bold text-white"
-          style={{ fontFamily: 'Geist Semibold' }}
+          style={{ fontFamily: 'DM Sans' }}
         >
           {page.data.title}
         </h1>
@@ -84,13 +93,13 @@ export const GET = async (request: NextRequest) => {
       height: 630,
       fonts: [
         {
-          name: 'Geist Semibold',
-          data: await loadGoogleFont('Geist', text, '600'),
+          name: 'DM Sans',
+          data: await loadGoogleFont('DM Sans', text, '600'),
           style: 'normal',
         },
         {
-          name: 'Geist',
-          data: await loadGoogleFont('Geist', text, '400'),
+          name: 'IBM Plex Mono',
+          data: await loadGoogleFont('IBM Plex Mono', text, '400'),
           style: 'normal',
         },
       ],

@@ -132,7 +132,7 @@ export const Preview = async ({
     const parsedString = parseContent(str);
 
     const matches = parsedString.match(
-      /from ['"]@\/components\/ui\/(?!logos\/)(?!prodkt-ui\/)([^'"]+)['"]/g
+      /from ['"]@\/components\/ui\/(?!(logos|prodkt-ui|logos\/))[^'"/]+['"]/g
     );
 
     if (matches) {
