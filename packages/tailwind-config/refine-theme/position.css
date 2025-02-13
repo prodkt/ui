@@ -1,0 +1,38 @@
+:root {
+  --landing-wizard-option-right: top -350px right -350px, center;
+  --landing-wizard-option-left: bottom -350px left -350px, center;
+  --landing-wizard-side-left-position: center left;
+  --landing-wizard-side-right-position: center right;
+  --landing-sweet-spot-glow-position-lg: center, calc(50% + 800px)
+    calc(50% - 300px);
+  --landing-sweet-spot-glow-position-md: center, calc(50% + 490px)
+    calc(50% + 180px);
+  --landing-sweet-spot-glow-position-xs: center, calc(50% - 30px)
+    calc(50% + 300px);
+  --wheel-already-invented-position: center;
+}
+
+@utility bg-landing-wizard-option-right {
+  background-position: var(--landing-wizard-option-right);
+}
+@utility bg-landing-wizard-option-left {
+  background-position: var(--landing-wizard-option-left);
+}
+@utility bg-landing-wizard-side-left-position {
+  background-position: var(--landing-wizard-side-left-position);
+}
+@utility bg-landing-wizard-side-right-position {
+  background-position: var(--landing-wizard-side-right-position);
+}
+@utility bg-landing-sweet-spot-glow-position-lg {
+  background-position: var(--landing-sweet-spot-glow-position-lg);
+}
+@utility bg-landing-sweet-spot-glow-position-md {
+  background-position: var(--landing-sweet-spot-glow-position-md);
+}
+@utility bg-landing-sweet-spot-glow-position-xs {
+  background-position: var(--landing-sweet-spot-glow-position-xs);
+}
+@utility bg-wheel-already-invented-position {
+  background-position: var(--wheel-already-invented-position);
+}

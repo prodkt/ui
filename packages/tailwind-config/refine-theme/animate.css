@@ -1,0 +1,57 @@
+@theme {
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-beat: 2s ease-in-out 1.5s infinite normal forwards running
+    landing-hero-beat;
+  --animate-playground-slide-down: playground-slide-down 45s linear infinite;
+  --animate-playground-slide-down-mobile: playground-slide-down-mobile 45s
+    linear infinite;
+  --animate-playground-slide-up: playground-slide-up 45s linear infinite;
+  --animate-playground-slide-up-mobile: playground-slide-up-mobile 45s linear
+    infinite;
+  --animate-hackathon-button-bg: hackathon-button-bg 2s ease-in-out infinite
+    alternate;
+  --animate-walkthrough-bounce: walkthrough-bounce 3s ease-in-out infinite;
+  --animate-top-announcement-glow: top-announcement-glow 1s ease-in-out infinite
+    alternate;
+  --animate-landing-hero-grid-beats: landing-hero-grid-beats 2s ease-in-out
+    infinite;
+  --animate-hero-logo-pulse: hero-logo-pulse 4s ease-in-out infinite;
+  --animate-mini-bounce: mini-bounce 3s ease-in-out infinite;
+  --animate-dot-waves: dot-waves 2.5s linear infinite;
+  --animate-landing-packages-left: landing-packages-left 65s linear infinite;
+  --animate-landing-packages-right: landing-packages-right 60s linear infinite;
+  --animate-code-scroll: code-scroll 25s linear infinite;
+  --animate-beam-spin: beam-spin 3s linear 1 forwards;
+  --animate-landing-hero-beam-line: landing-hero-beam-line 7.5s ease-in-out
+    infinite;
+  --animate-landing-hero-beam-glow: landing-hero-beam-glow 7.5s ease-in-out
+    infinite;
+  --animate-landing-hero-beam-bottom: landing-hero-beam-bottom 7.5s ease-in-out
+    infinite;
+  --animate-showcase-bottom-fade-reveal: showcase-bottom-fade-reveal 0.3s
+    ease-in-out forwards;
+  --animate-opacity-reveal: opacity-reveal 1s ease-in-out forwards;
+  --animate-wheel-already-invented-reveal: wheel-already-invented-reveal 0.6s
+    cubic-bezier(0.23, 0.95, 0.64, 1.24) forwards;
+  --animate-showcase-reveal: showcase-reveal 0.3s ease-in-out forwards;
+  --animate-github-stars-border: github-stars-border 10s linear infinite
+    alternate;
+  --animate-github-stars-glow: github-stars-glow 10s linear infinite alternate;
+  --animate-enterprise-iam-services-left: enterprise-iam-services-left 40s
+    linear infinite;
+  --animate-enterprise-iam-services-right: enterprise-iam-services-right 40s
+    linear infinite;
+  --animate-enterprise-data-source-left: enterprise-data-source-left 25s linear
+    infinite;
+  --animate-enterprise-data-source-right: enterprise-data-source-right 25s
+    linear infinite;
+  --animate-enterprise-table-left-to-right: enterprise-table-left-to-right 0.3s
+    ease-in-out forwards;
+  --animate-enterprise-table-right-to-left: enterprise-table-right-to-left 0.3s
+    ease-in-out forwards;
+  --animate-new-badge-border: new-badge-border 4s linear infinite;
+  --animate-reveal: reveal 0.3s ease-in-out forwards;
+  --animate-progress-fill: progressFill 1s linear 1 forwards;
+  --animate-refine-ai-video-play-button: refine-ai-video-play-button 1.8s
+    ease-out infinite;
+}

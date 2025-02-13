@@ -1,0 +1,1200 @@
+@theme {
+  --bg-landing-noise: var(--landing-noise);
+  --bg-landing-noise: var(--landing-noise);
+  --bg-noise: var(--noise);
+  --bg-walkthrough-button-shadow: var(--walkthrough-button-shadow);
+  --bg-walkthrough-button-alt-shadow: var(--walkthrough-button-alt-shadow);
+  --bg-selected-tab-light: var(--selected-tab-light);
+  --bg-selected-tab-dark: var(--selected-tab-dark);
+  --bg-landing-stars: var(--landing-stars);
+  --bg-landing-component-divider-dark: var(--landing-component-divider-dark);
+  --bg-landing-component-divider: var(--landing-component-divider);
+  --bg-landing-component-badge: var(--landing-component-badge);
+  --bg-landing-component-badge-glow: var(--landing-component-badge-glow);
+  --bg-landing-text-bg: var(--landing-text-bg);
+  --bg-landing-text-bg-alt: var(--landing-text-bg-alt);
+  --bg-landing-sliding-highlight-bg: var(--landing-sliding-highlight-bg);
+  --bg-landing-rainbow: var(--landing-rainbow);
+  --bg-landing-ghost: var(--landing-ghost);
+  --bg-landing-hero-video-bg: var(--landing-hero-video-bg);
+  --bg-landing-hero-bottom-bg: var(--landing-hero-bottom-bg);
+  --bg-landing-hero-mobile-animation-bg: var(--landing-hero-mobile-animation-bg);
+  --bg-landing-video-bottom-mobile-bg: var(--landing-video-bottom-mobile-bg);
+  --bg-landing-video-bottom-line: var(--landing-video-bottom-line);
+  --bg-landing-video-bottom-line-glow: var(--landing-video-bottom-line-glow);
+  --bg-landing-linear-spectrum: var(--landing-linear-spectrum);
+  --bg-landing-planar-grid: var(--landing-planar-grid);
+  --bg-landing-planar-grid-reversed: var(--landing-planar-grid-reversed);
+  --bg-landing-planar-grid-mobile: var(--landing-planar-grid-mobile);
+  --bg-landing-planar-grid-reversed-mobile: var(
+    --landing-planar-grid-reversed-mobile
+  );
+  --bg-landing-tile-image-bg: var(--landing-tile-image-bg);
+  --bg-landing-tile-tile-bg: var(--landing-tile-tile-bg);
+  --bg-landing-tile-border-bg: var(--landing-tile-border-bg);
+  --bg-landing-tile-grid-bg: var(--landing-tile-grid-bg);
+  --bg-landing-tile-grid-mobile-bg: var(--landing-tile-grid-mobile-bg);
+  --bg-landing-stats-bg: var(--landing-stats-bg);
+  --bg-landing-stats-border-bg: var(--landing-stats-border-bg);
+  --bg-landing-stats-text-dark: var(--landing-stats-text-dark);
+  --bg-landing-stats-text: var(--landing-stats-text);
+  --bg-landing-playground-bg: var(--landing-playground-bg);
+  --bg-landing-playground-slide-left-bg: var(--landing-playground-slide-left-bg);
+  --bg-landing-playground-slide-right-bg: var(
+    --landing-playground-slide-right-bg
+  );
+  --bg-landing-trusted-by-developers-dark: var(
+    --landing-trusted-by-developers-dark
+  );
+  --bg-landing-trusted-by-developers: var(--landing-trusted-by-developers);
+  --bg-landing-packages-dark: var(--landing-packages-dark);
+  --bg-landing-packages: var(--landing-packages);
+  --bg-landing-sweet-spot-glow-red-dark: var(--landing-sweet-spot-glow-red-dark);
+  --bg-landing-sweet-spot-glow-yellow-dark: var(
+    --landing-sweet-spot-glow-yellow-dark
+  );
+  --bg-landing-sweet-spot-glow-orange-dark: var(
+    --landing-sweet-spot-glow-orange-dark
+  );
+  --bg-landing-sweet-spot-glow-cyan-dark: var(
+    --landing-sweet-spot-glow-cyan-dark
+  );
+  --bg-landing-sweet-spot-glow-blue-dark: var(
+    --landing-sweet-spot-glow-blue-dark
+  );
+  --bg-landing-sweet-spot-glow-indigo-dark: var(
+    --landing-sweet-spot-glow-indigo-dark
+  );
+  --bg-landing-sweet-spot-glow-red-light: var(
+    --landing-sweet-spot-glow-red-light
+  );
+  --bg-landing-sweet-spot-glow-yellow-light: var(
+    --landing-sweet-spot-glow-yellow-light
+  );
+  --bg-landing-sweet-spot-glow-orange-light: var(
+    --landing-sweet-spot-glow-orange-light
+  );
+  --bg-landing-sweet-spot-glow-cyan-light: var(
+    --landing-sweet-spot-glow-cyan-light
+  );
+  --bg-landing-sweet-spot-glow-blue-light: var(
+    --landing-sweet-spot-glow-blue-light
+  );
+  --bg-landing-sweet-spot-glow-indigo-light: var(
+    --landing-sweet-spot-glow-indigo-light
+  );
+  --bg-landing-packages-text: var(--landing-packages-text);
+  --bg-landing-packages-text-dark: var(--landing-packages-text-dark);
+  --bg-hackathon-button-bg: var(--hackathon-button-bg);
+  --bg-refine-week-supabase-timeline-item-bg: var(
+    --refine-week-supabase-timeline-item-bg
+  );
+  --bg-refine-week-supabase-timeline-item-bg-lg: var(
+    --refine-week-supabase-timeline-item-bg-lg
+  );
+  --bg-refine-week-strapi-timeline-item-bg: var(
+    --refine-week-strapi-timeline-item-bg
+  );
+  --bg-refine-week-strapi-timeline-item-bg-lg: var(
+    --refine-week-strapi-timeline-item-bg-lg
+  );
+  --bg-week-of-refine-strapi-card: var(--week-of-refine-strapi-card);
+  --bg-week-of-refine-supabase-card: var(--week-of-refine-supabase-card);
+  --bg-week-of-refine-strapi-card-light: var(--week-of-refine-strapi-card-light);
+  --bg-week-of-refine-supabase-card-light: var(
+    --week-of-refine-supabase-card-light
+  );
+  --bg-banner-examples-gray: var(--banner-examples-gray);
+  --bg-banner-examples-purple: var(--banner-examples-purple);
+  --bg-banner-examples-modal-gray: var(--banner-examples-modal-gray);
+  --bg-banner-examples-modal-purple: var(--banner-examples-modal-purple);
+  --bg-banner-examples-sider-gray: var(--banner-examples-sider-gray);
+  --bg-banner-examples-sider-purple: var(--banner-examples-sider-purple);
+  --bg-banner-examples-text: var(--banner-examples-text);
+  --bg-top-announcement-text: var(--top-announcement-text);
+  --bg-sidebar-item-shiny-dark: var(--sidebar-item-shiny-dark);
+  --bg-sidebar-item-shiny-light: var(--sidebar-item-shiny-light);
+  --bg-top-announcement-bg-tr: var(--top-announcement-bg-tr);
+  --bg-landing-hero-item-name-gradient: var(--landing-hero-item-name-gradient);
+  --bg-landing-hero-item-background: var(--landing-hero-item-background);
+  --bg-landing-hero-beam-bottom: var(--landing-hero-beam-bottom);
+  --bg-landing-hero-beam-bottom-light: var(--landing-hero-beam-bottom-light);
+  --bg-landing-hero-github-stars-gradient: var(
+    --landing-hero-github-stars-gradient
+  );
+  --bg-landing-hero-github-stars-text-light: var(
+    --landing-hero-github-stars-text-light
+  );
+  --bg-landing-hero-github-stars-text-dark: var(
+    --landing-hero-github-stars-text-dark
+  );
+  --bg-landing-hero-xray-dot-center-bg: var(--landing-hero-xray-dot-center-bg);
+  --bg-landing-hero-xray-dot-center-bg-light: var(
+    --landing-hero-xray-dot-center-bg-light
+  );
+  --bg-landing-wizard-option-bg-dark: var(--landing-wizard-option-bg-dark);
+  --bg-landing-wizard-option-bg-light: var(--landing-wizard-option-bg-light);
+  --bg-landing-hero-beam-bg: var(--landing-hero-beam-bg);
+  --bg-footer-landing-dark-bg: var(--footer-landing-dark-bg);
+  --bg-footer-blog-dark-bg: var(--footer-blog-dark-bg);
+  --bg-footer-blog-light-bg: var(--footer-blog-light-bg);
+  --bg-landing-wizard-side-bg: var(--landing-wizard-side-bg);
+  --bg-landing-wizard-side-bg-light: var(--landing-wizard-side-bg-light);
+  --bg-landing-copy-command-hover-bg-dark: var(
+    --landing-copy-command-hover-bg-dark
+  );
+  --bg-landing-copy-command-hover-bg-light: var(
+    --landing-copy-command-hover-bg-light
+  );
+  --bg-enterprise-copy-command-hover-bg-dark: var(
+    --enterprise-copy-command-hover-bg-dark
+  );
+  --bg-enterprise-copy-command-hover-bg-light: var(
+    --enterprise-copy-command-hover-bg-light
+  );
+  --bg-enterprise-cta-dark: var(--enterprise-cta-dark);
+  --bg-enterprise-cta-dark-md: var(--enterprise-cta-dark-md);
+  --bg-enterprise-cta-light: var(--enterprise-cta-light);
+  --bg-enterprise-cta-light-md: var(--enterprise-cta-light-md);
+  --bg-enterprise-data-source-dark: var(--enterprise-data-source-dark);
+  --bg-enterprise-frequent-updates-dark: var(--enterprise-frequent-updates-dark);
+  --bg-enterprise-frequent-updates-light: var(
+    --enterprise-frequent-updates-light
+  );
+  --bg-enterprise-frequent-updates-dark-md: var(
+    --enterprise-frequent-updates-dark-md
+  );
+  --bg-enterprise-frequent-updates-light-md: var(
+    --enterprise-frequent-updates-light-md
+  );
+  --bg-new-badge-border-dark: var(--new-badge-border-dark);
+  --bg-new-badge-border-light: var(--new-badge-border-light);
+  --bg-purple-new-badge-border-dark: var(--purple-new-badge-border-dark);
+  --bg-purple-new-badge-border-light: var(--purple-new-badge-border-light);
+  --bg-enterprise-cta-button-bg-light: var(--enterprise-cta-button-bg-light);
+  --bg-enterprise-cta-button-bg-dark: var(--enterprise-cta-button-bg-dark);
+  --bg-landing-wai-sunshine-light: var(--landing-wai-sunshine-light);
+  --bg-landing-wai-sunshine-dark: var(--landing-wai-sunshine-dark);
+  --bg-landing-wai-grid-light: var(--landing-wai-grid-light);
+  --bg-landing-wai-grid-dark: var(--landing-wai-grid-dark);
+  --bg-landing-wai-bg-dark: var(--landing-wai-bg-dark);
+  --bg-refine-ai-page-bg-dark: var(--refine-ai-page-bg-dark);
+  --bg-refine-ai-page-bg-light: var(--refine-ai-page-bg-light);
+}
+
+:root {
+  --landing-noise: url("/assets/refine-theme/landing-noise.webp");
+  --noise: url("/assets/refine-theme/landing-noise.webp");
+  --walkthrough-button-shadow: conic-gradient(
+    from 231deg at 50% 50%,
+    #a3a3f5 0%,
+    #4d4db2 6%,
+    #4d4db2 44%,
+    #a3a3f5 50%,
+    #4d4db2 56%,
+    #4d4db2 94%,
+    #a3a3f5 100%
+  );
+  --walkthrough-button-alt-shadow: conic-gradient(
+    from 231deg at 50% 50%,
+    #a3a3f5 0%,
+    #474e6b 6%,
+    #474e6b 44%,
+    #a3a3f5 50%,
+    #474e6b 56%,
+    #474e6b 94%,
+    #a3a3f5 100%
+  );
+  --selected-tab-light: linear-gradient(
+    180deg,
+    rgba(110, 179, 247, 0) 50%,
+    rgba(0, 128, 255, 0.25) 100%
+  );
+  --selected-tab-dark: linear-gradient(
+    180deg,
+    rgba(110, 179, 247, 0) 50%,
+    rgba(0, 128, 255, 0.25) 100%
+  );
+  --landing-stars: linear-gradient(
+      180deg,
+      rgba(10, 10, 41, 0.6) 0%,
+      rgba(10, 10, 41, 0.4) 100%
+    ), url("/assets/refine-theme/landing-stars.webp"),
+    url("/assets/refine-theme/landing-noise.webp");
+  --landing-component-divider-dark: linear-gradient(
+    90deg,
+    rgba(48, 52, 80, 0) 0%,
+    #303450 12.5%,
+    #303450 87.5%,
+    rgba(48, 52, 80, 0) 100%
+  );
+  --landing-component-divider: linear-gradient(
+    270deg,
+    rgba(31, 173, 102, 0) 0%,
+    rgba(31, 173, 102, 0.5) 12.5%,
+    rgba(31, 173, 102, 0.5) 87.5%,
+    rgba(31, 173, 102, 0) 100%
+  );
+  --landing-component-badge: linear-gradient(
+      306deg,
+      #303450 0%,
+      rgba(20, 20, 31, 0.5) 100%
+    ),
+    linear-gradient(
+      168deg,
+      rgba(38, 217, 127, 0.9) 15%,
+      rgba(71, 235, 235, 0) 50%
+    ), linear-gradient(0deg, #303450, #303450);
+  --landing-component-badge-glow: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(38, 217, 127, 0.1) 0%,
+    rgba(71, 235, 235, 0) 100%
+  );
+  --landing-text-bg: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  --landing-text-bg-alt: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.4) 80%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  --landing-sliding-highlight-bg: linear-gradient(
+    180deg,
+    #3fdcf7 0%,
+    rgba(63, 220, 247, 0.6) 100%
+  );
+  --landing-rainbow: conic-gradient(
+    from 180deg at 50% 50%,
+    #3fdcf7 0deg,
+    #1890ff 51.43deg,
+    #6813cb 102.86deg,
+    #ff003d 154.29deg,
+    #ff8a00 205.71deg,
+    #ffd600 257.14deg,
+    #67be23 308.57deg,
+    #3fdcf7 360deg
+  );
+  --landing-ghost: conic-gradient(
+    from 90deg at 50% 50%,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.25) 10%,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0.25) 30%,
+    rgba(255, 255, 255, 0.25) 60%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0.25) 80%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  --landing-hero-video-bg: url("/assets/refine-theme/hero-video-bg.webp");
+  --landing-hero-bottom-bg: url("/assets/refine-theme/hero-bottom-bg.svg");
+  --landing-hero-mobile-animation-bg: url("/assets/refine-theme/hero-mobile-animation.svg");
+  --landing-video-bottom-mobile-bg: url("/assets/refine-theme/hero-video-bottom-mobile.svg");
+  --landing-video-bottom-line: url("/assets/refine-theme/landing-video-bottom-line.svg");
+  --landing-video-bottom-line-glow: url("/assets/refine-theme/landing-video-bottom-line-glow.svg");
+  --landing-linear-spectrum: linear-gradient(
+    90deg,
+    #fffe00 0%,
+    #ff9933 12.5%,
+    #ff4c4d 25%,
+    #ed5ec9 37.5%,
+    #8000ff 50%,
+    #3333ff 62.5%,
+    #0080ff 75%,
+    #47ebeb 87.5%,
+    #26d97f 100%
+  );
+  --landing-planar-grid: url("/assets/refine-theme/landing-planar-grid.svg");
+  --landing-planar-grid-reversed: url("/assets/refine-theme/landing-planar-grid-reversed.svg");
+  --landing-planar-grid-mobile: url("/assets/refine-theme/landing-planar-grid-mobile.svg");
+  --landing-planar-grid-reversed-mobile: url("/assets/refine-theme/landing-planar-grid-reversed-mobile.svg");
+  --landing-tile-image-bg: radial-gradient(
+    50.33% 83.06% at -0.33% 100%,
+    rgba(77, 77, 179, 0.5) 0%,
+    rgba(77, 77, 179, 0) 100%
+  );
+  --landing-tile-tile-bg: radial-gradient(
+    232% 232% at 100% 100%,
+    rgba(77, 77, 179, 0) 0%,
+    rgba(77, 77, 179, 0.05) 33.33%,
+    rgba(77, 77, 179, 0.1) 66.67%,
+    rgba(77, 77, 179, 0.2) 100%
+  );
+  --landing-tile-border-bg: radial-gradient(
+    100% 100% at 0% 0%,
+    #4d4db3 0%,
+    rgba(77, 77, 179, 0.05) 50%,
+    rgba(77, 77, 179, 0.5) 100%
+  );
+  --landing-tile-grid-bg: url("/assets/refine-theme/landing-tile-grid.svg");
+  --landing-tile-grid-mobile-bg: url("/assets/refine-theme/landing-tile-grid-mobile.svg");
+  --landing-stats-bg: radial-gradient(
+      59.21% 56.25% at 0% 0%,
+      #17174f 0%,
+      rgba(23, 23, 79, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.165) 100%);
+  --landing-stats-border-bg: conic-gradient(
+    from -90deg at 50% 50%,
+    rgba(77, 77, 179, 0) 0deg,
+    #4d4db3 39.37deg,
+    rgba(77, 77, 179, 0) 86.25deg,
+    rgba(77, 77, 179, 0) 198.75deg,
+    #4d4db3 232.5deg,
+    rgba(77, 77, 179, 0) 275.62deg,
+    rgba(77, 77, 179, 0) 360deg
+  );
+  --landing-stats-text-dark: linear-gradient(
+    180deg,
+    #fff 25%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  --landing-stats-text: linear-gradient(
+    180deg,
+    #14141f 25%,
+    rgba(20, 20, 31, 0.5) 100%
+  );
+  --landing-playground-bg: linear-gradient(
+      90deg,
+      rgba(23, 23, 79, 0) 0%,
+      #17174f 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.165) 0%,
+      rgba(0, 0, 0, 0.33) 50%,
+      rgba(0, 0, 0, 0.165) 100%
+    );
+  --landing-playground-slide-left-bg: url("/assets/refine-theme/landing-playground-slide-left.svg");
+  --landing-playground-slide-right-bg: url("/assets/refine-theme/landing-playground-slide-right.svg");
+  --landing-trusted-by-developers-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      40% 100% at 110% 0%,
+      rgba(71, 235, 235, 0.15) 0%,
+      rgba(71, 235, 235, 0.0) 100%
+    );
+  --landing-trusted-by-developers: radial-gradient(
+    40% 100% at 110% 20%,
+    rgba(0, 128, 255, 0.15) 0%,
+    #f4f8fb 100%
+  );
+  --landing-packages-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 100% at 50% -40%,
+      rgba(71, 235, 235, 0.15) 0%,
+      rgba(71, 235, 235, 0.0) 100%
+    );
+  --landing-packages: radial-gradient(
+    50% 100% at 50% -60%,
+    rgba(0, 128, 255, 0.15) 0%,
+    #f4f8fb 100%
+  );
+  --landing-sweet-spot-glow-red-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(250, 56, 82, 0.15) 0%,
+      rgba(250, 56, 82, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-yellow-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(249, 213, 31, 0.15) 0%,
+      rgba(249, 213, 31, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-orange-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(249, 140, 31, 0.15) 0%,
+      rgba(249, 140, 31, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-cyan-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(71, 209, 191, 0.15) 0%,
+      rgba(71, 209, 191, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-blue-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(61, 184, 245, 0.15) 0%,
+      rgba(61, 184, 245, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-indigo-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(89, 89, 255, 0.15) 0%,
+      rgba(89, 89, 255, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-red-light: radial-gradient(
+      50% 50% at 70% 0%,
+      rgba(210, 45, 45, 0.05) 0%,
+      rgba(210, 45, 45, 0.0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(210, 45, 45, 0.15) 0%,
+      rgba(210, 45, 45, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-yellow-light: radial-gradient(
+      50% 50% at 70% 0%,
+      rgba(244, 106, 37, 0.05) 0%,
+      rgba(244, 106, 37, 0.0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(244, 106, 37, 0.15) 0%,
+      rgba(244, 106, 37, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-orange-light: radial-gradient(
+      50% 50% at 70% 0%,
+      rgba(255, 159, 26, 0.05) 0%,
+      rgba(255, 159, 26, 0.0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 159, 26, 0.15) 0%,
+      rgba(255, 159, 26, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-cyan-light: radial-gradient(
+      50% 50% at 70% 0%,
+      rgba(8, 145, 145, 0.05) 0%,
+      rgba(8, 145, 145, 0.0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(8, 145, 145, 0.15) 0%,
+      rgba(8, 145, 145, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-blue-light: radial-gradient(
+      50% 50% at 70% 0%,
+      rgba(31, 128, 224, 0.05) 0%,
+      rgba(31, 128, 224, 0.0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(31, 128, 224, 0.15) 0%,
+      rgba(31, 128, 224, 0.0) 100%
+    );
+  --landing-sweet-spot-glow-indigo-light: radial-gradient(
+      50% 50% at 70% 0%,
+      rgba(105, 59, 198, 0.05) 0%,
+      rgba(105, 59, 198, 0.0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(105, 59, 198, 0.15) 0%,
+      rgba(105, 59, 198, 0.0) 100%
+    );
+  --landing-packages-text: linear-gradient(180deg, #14141f 0%, #474e6b 100%);
+  --landing-packages-text-dark: linear-gradient(
+    180deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  --hackathon-button-bg: linear-gradient(
+    90deg,
+    rgba(255, 76, 166, 0.3) 0%,
+    rgba(128, 0, 255, 0.3) 50%,
+    rgba(0, 128, 255, 0.3) 100%
+  );
+
+  --refine-week-supabase-timeline-item-bg: linear-gradient(
+    360deg,
+    rgba(62, 207, 142, 0) 0%,
+    rgba(62, 207, 142, 0.25) 50%,
+    rgba(62, 207, 142, 0) 100%
+  );
+  --refine-week-supabase-timeline-item-bg-lg: linear-gradient(
+    256deg,
+    rgba(62, 207, 142, 0.25) 0%,
+    rgba(62, 207, 142, 0) 60%
+  );
+  --refine-week-strapi-timeline-item-bg: linear-gradient(
+    360deg,
+    rgba(73, 69, 255, 0) 0%,
+    rgba(73, 69, 255, 0.25) 50%,
+    rgba(73, 69, 255, 0) 100%
+  );
+  --refine-week-strapi-timeline-item-bg-lg: linear-gradient(
+    256deg,
+    rgba(73, 69, 255, 0.25) 0%,
+    rgba(73, 69, 255, 0) 60%
+  );
+  --week-of-refine-strapi-card: linear-gradient(
+    207deg,
+    rgba(73, 69, 255, 0.25) 0%,
+    rgba(73, 69, 255, 0.0) 100%
+  );
+  --week-of-refine-supabase-card: linear-gradient(
+    207deg,
+    rgba(62, 207, 142, 0.25) 0%,
+    rgba(62, 207, 142, 0.0) 100%
+  );
+  --week-of-refine-strapi-card-light: linear-gradient(
+    207deg,
+    rgba(73, 69, 255, 0.15) 0%,
+    rgba(73, 69, 255, 0.0) 100%
+  );
+  --week-of-refine-supabase-card-light: linear-gradient(
+    207deg,
+    rgba(62, 207, 142, 0.15) 0%,
+    rgba(62, 207, 142, 0.0) 100%
+  );
+  --banner-examples-gray: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(70.09% 100% at 50% 0%, #474e6b 0%, #303450 100%);
+  --banner-examples-purple: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      294.84% 141.42% at 100% 100%,
+      #33f 0%,
+      #8000ff 50%,
+      #303450 100%
+    );
+  --banner-examples-modal-gray: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(75.69% 100% at 50% 0%, #474e6b 0%, #303450 100%);
+  --banner-examples-modal-purple: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      152.26% 141.42% at 100% 100%,
+      #33f 0%,
+      #8000ff 50%,
+      #303450 100%
+    );
+  --banner-examples-sider-gray: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(75.69% 100% at 50% 0%, #474e6b 0%, #303450 100%);
+  --banner-examples-sider-purple: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      191.28% 141.42% at 100% 100%,
+      #33f 0%,
+      #8000ff 50%,
+      #303450 100%
+    );
+  --banner-examples-text: linear-gradient(
+    180deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  --top-announcement-text: linear-gradient(
+    90deg,
+    rgba(31, 63, 72, 0.0) 0%,
+    #1f3f48 10%,
+    #1f3f48 90%,
+    rgba(31, 63, 72, 0.0) 100%
+  );
+  --sidebar-item-shiny-dark: radial-gradient(
+    457.67% 141.42% at 0% 0%,
+    rgba(71, 235, 235, 0.1) 0%,
+    rgba(71, 235, 235, 0.2) 100%
+  );
+  --sidebar-item-shiny-light: radial-gradient(
+    457.67% 141.42% at 0% 0%,
+    rgba(0, 128, 255, 0.2) 0%,
+    rgba(0, 128, 255, 0.1) 100%
+  );
+  --top-announcement-bg-tr: url("/assets/refine-theme/top-announcement-tr.png");
+  --landing-hero-item-name-gradient: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  --landing-hero-item-background: radial-gradient(
+    104% 104% at 0% 0%,
+    rgba(249, 210, 54, 0.1) 0%,
+    rgba(249, 210, 54, 0.0) 100%
+  );
+  --landing-hero-beam-bottom: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    #47ebeb,
+    rgba(255, 255, 255, 0)
+  );
+  --landing-hero-beam-bottom-light: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    #0080ff,
+    rgba(255, 255, 255, 0)
+  );
+  --landing-hero-github-stars-gradient: radial-gradient(
+    260.41% 41.87% at 8.38% 50%,
+    rgba(255, 153, 51, 0.1) 0%,
+    rgba(255, 153, 51, 0.0) 100%
+  );
+  --landing-hero-github-stars-text-light: linear-gradient(
+    180deg,
+    #14141f 0%,
+    #6c7793 100%
+  );
+  --landing-hero-github-stars-text-dark: linear-gradient(
+    180deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  --landing-hero-xray-dot-center-bg: radial-gradient(
+    100% 100% at 0% 0%,
+    #74ffff 0%,
+    #0fbdbd 50%,
+    #0fbdbd 100%
+  );
+  --landing-hero-xray-dot-center-bg-light: radial-gradient(
+    100% 100% at 0% 0%,
+    #74ffff 0%,
+    #0080ff 50%,
+    #0080ff 100%
+  );
+  --landing-wizard-option-bg-dark: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(71, 235, 235, 0.15) 0%,
+      rgba(71, 235, 235, 0) 100%
+    ), url("/assets/refine-theme/landing-noise.webp");
+  --landing-wizard-option-bg-light: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 128, 255, 0.15) 0%,
+    rgba(0, 128, 255, 0) 100%
+  );
+  --landing-hero-beam-bg: conic-gradient(
+    from 280deg,
+    currentColor 6%,
+    transparent 14%,
+    transparent 100%
+  );
+  --footer-landing-dark-bg: linear-gradient(
+    180deg,
+    rgba(29, 30, 48, 0.5) 0%,
+    #14141f 100%
+  );
+  --footer-blog-dark-bg: linear-gradient(
+    180deg,
+    rgba(52, 58, 70, 0) 0%,
+    rgba(52, 58, 70, 0.5) 100%
+  );
+  --footer-blog-light-bg: linear-gradient(
+    180deg,
+    #f6f7f9 0%,
+    rgba(246, 247, 249, 0) 100%
+  );
+  --landing-wizard-side-bg: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(48, 52, 80, 0.75) 0%,
+    rgba(48, 52, 80, 0.38) 50%,
+    rgba(48, 52, 80, 0.0) 100%
+  );
+  --landing-wizard-side-bg-light: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(48, 52, 80, 0.75) 0%,
+    rgba(48, 52, 80, 0.1) 50%,
+    rgba(48, 52, 80, 0.0) 100%
+  );
+  --landing-copy-command-hover-bg-dark: radial-gradient(
+    transparent 30%,
+    rgba(71, 235, 235, 0.25)
+  );
+  --landing-copy-command-hover-bg-light: radial-gradient(
+    transparent 30%,
+    rgba(0, 128, 255, 0.1)
+  );
+  --enterprise-copy-command-hover-bg-dark: radial-gradient(
+    transparent 30%,
+    rgba(128, 0, 255, 0.3)
+  );
+  --enterprise-copy-command-hover-bg-light: radial-gradient(
+    transparent 30%,
+    rgba(128, 0, 255, 0.1)
+  );
+  --enterprise-cta-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      45% 80% at 50% 50%,
+      rgba(71, 235, 235, 0.15) 0%,
+      rgba(71, 235, 235, 0.0) 100%
+    );
+  --enterprise-cta-dark-md: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      30% 100% at 100% 50%,
+      rgba(71, 235, 235, 0.15) 0%,
+      rgba(71, 235, 235, 0.0) 100%
+    );
+  --enterprise-cta-light: radial-gradient(
+    100% 100% at 50% 50%,
+    rgba(0, 128, 255, 0.15) 0%,
+    rgba(0, 128, 255, 0.0) 100%
+  );
+  --enterprise-cta-light-md: radial-gradient(
+    60% 100% at 100% 50%,
+    rgba(0, 128, 255, 0.15) 0%,
+    rgba(0, 128, 255, 0.0) 100%
+  );
+  --enterprise-data-source-dark: radial-gradient(
+    100% 90% at 120% -12%,
+    rgba(255, 255, 255, 0.5) 45%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+  --enterprise-frequent-updates-dark: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      70% 90% at 50% 100%,
+      rgba(38, 217, 127, 0.1) 0%,
+      rgba(38, 217, 127, 0.0) 100%
+    );
+  --enterprise-frequent-updates-light: radial-gradient(
+    100% 100% at 50% 100%,
+    rgba(0, 128, 255, 0.25) 0%,
+    rgba(0, 128, 255, 0.0) 100%
+  );
+  --enterprise-frequent-updates-dark-md: url("/assets/refine-theme/landing-noise.webp"),
+    radial-gradient(
+      50% 100% at 100% 50%,
+      rgba(38, 217, 127, 0.15) 0%,
+      rgba(38, 217, 127, 0.0) 100%
+    );
+  --enterprise-frequent-updates-light-md: radial-gradient(
+    120% 100% at 100% 50%,
+    rgba(0, 128, 255, 0.25) 0%,
+    rgba(0, 128, 255, 0.0) 100%
+  );
+  --new-badge-border-dark: conic-gradient(
+    from 45deg at 50% 50%,
+    #194b3a,
+    rgb(38 217 127 / 40%),
+    #194b3a,
+    #194b3a,
+    #194b3a,
+    #26d97f,
+    #194b3a,
+    #194b3a,
+    #194b3a
+  );
+  --new-badge-border-light: conic-gradient(
+    from 45deg at 50% 50%,
+    #b7dbff,
+    rgb(0 128 255 / 50%),
+    #b7dbff,
+    #b7dbff,
+    #b7dbff,
+    #0080ff,
+    #b7dbff,
+    #b7dbff,
+    #b7dbff
+  );
+  --purple-new-badge-border-dark: conic-gradient(
+    from 45deg at 50% 50%,
+    #4d0099,
+    #e6ccff,
+    #4d0099,
+    #4d0099,
+    #4d0099,
+    #e6ccff,
+    #4d0099,
+    #4d0099,
+    #4d0099
+  );
+  --purple-new-badge-border-light: conic-gradient(
+    from 45deg at 50% 50%,
+    #e6ccff,
+    #4d0099,
+    #e6ccff,
+    #e6ccff,
+    #e6ccff,
+    #4d0099,
+    #e6ccff,
+    #e6ccff,
+    #e6ccff
+  );
+  --enterprise-cta-button-bg-light: radial-gradient(
+    100% 375% at 100% 50%,
+    #8000ff 0%,
+    #3333ff 100%
+  );
+  --enterprise-cta-button-bg-dark: radial-gradient(
+    100% 375% at 100% 50%,
+    #26d97f 0%,
+    #47ebeb 100%
+  );
+  --landing-wai-sunshine-light: url("/assets/refine-theme/wheel-already-invented-sunshine-light.png");
+  --landing-wai-sunshine-dark: url("/assets/refine-theme/wheel-already-invented-sunshine-normal.webp");
+  --landing-wai-grid-light: url("/assets/refine-theme/wheel-already-invented-grid-unit-normal-light.png");
+  --landing-wai-grid-dark: url("/assets/refine-theme/wheel-already-invented-grid-unit-normal.png");
+  --landing-wai-bg-dark: radial-gradient(
+    57.03% 100% at 50% 0%,
+    rgba(71, 235, 235, 0.25) 0%,
+    rgba(71, 235, 235, 0) 100%
+  );
+  --refine-ai-page-bg-dark: url("/assets/refine-theme/refine-ai-page-bg-dark.png"),
+    radial-gradient(
+      46.3% 35.37% at 50% 35.37%,
+      rgba(38, 217, 126, 0.25) 0%,
+      rgba(38, 217, 126, 0) 100%
+    );
+  --refine-ai-page-bg-light: url("/assets/refine-theme/refine-ai-page-bg-light.png"),
+    radial-gradient(
+      46.3% 35.37% at 50% 35.37%,
+      rgba(51, 51, 255, 0.15) 0%,
+      rgba(51, 51, 255, 0) 100%
+    ),
+    radial-gradient(
+      46.3% 35.37% at 50% 35.37%,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+}
+
+@utility bg-landing-noise {
+  background-image: var(--bg-landing-noise);
+}
+@utility bg-landing-noise {
+  background-image: var(--bg-landing-noise);
+}
+@utility bg-noise {
+  background-image: var(--bg-noise);
+}
+@utility bg-walkthrough-button-shadow {
+  background-image: var(--bg-walkthrough-button-shadow);
+}
+@utility bg-walkthrough-button-alt-shadow {
+  background-image: var(--bg-walkthrough-button-alt-shadow);
+}
+@utility bg-selected-tab-light {
+  background-image: var(--bg-selected-tab-light);
+}
+@utility bg-selected-tab-dark {
+  background-image: var(--bg-selected-tab-dark);
+}
+@utility bg-landing-stars {
+  background-image: var(--bg-landing-stars);
+}
+@utility bg-landing-component-divider-dark {
+  background-image: var(--bg-landing-component-divider-dark);
+}
+@utility bg-landing-component-divider {
+  background-image: var(--bg-landing-component-divider);
+}
+@utility bg-landing-component-badge {
+  background-image: var(--bg-landing-component-badge);
+}
+@utility bg-landing-component-badge-glow {
+  background-image: var(--bg-landing-component-badge-glow);
+}
+@utility bg-landing-text-bg {
+  background-image: var(--bg-landing-text-bg);
+}
+@utility bg-landing-text-bg-alt {
+  background-image: var(--bg-landing-text-bg-alt);
+}
+@utility bg-landing-sliding-highlight-bg {
+  background-image: var(--bg-landing-sliding-highlight-bg);
+}
+@utility bg-landing-rainbow {
+  background-image: var(--bg-landing-rainbow);
+}
+@utility bg-landing-ghost {
+  background-image: var(--bg-landing-ghost);
+}
+@utility bg-landing-hero-video-bg {
+  background-image: var(--bg-landing-hero-video-bg);
+}
+@utility bg-landing-hero-bottom-bg {
+  background-image: var(--bg-landing-hero-bottom-bg);
+}
+@utility bg-landing-hero-mobile-animation-bg {
+  background-image: var(--bg-landing-hero-mobile-animation-bg);
+}
+@utility bg-landing-video-bottom-mobile-bg {
+  background-image: var(--bg-landing-video-bottom-mobile-bg);
+}
+@utility bg-landing-video-bottom-line {
+  background-image: var(--bg-landing-video-bottom-line);
+}
+@utility bg-landing-video-bottom-line-glow {
+  background-image: var(--bg-landing-video-bottom-line-glow);
+}
+@utility bg-landing-linear-spectrum {
+  background-image: var(--bg-landing-linear-spectrum);
+}
+@utility bg-landing-planar-grid {
+  background-image: var(--bg-landing-planar-grid);
+}
+@utility bg-landing-planar-grid-reversed {
+  background-image: var(--bg-landing-planar-grid-reversed);
+}
+@utility bg-landing-planar-grid-mobile {
+  background-image: var(--bg-landing-planar-grid-mobile);
+}
+@utility bg-landing-planar-grid-reversed-mobile {
+  background-image: var(--bg-landing-planar-grid-reversed-mobile);
+}
+@utility bg-landing-tile-image-bg {
+  background-image: var(--bg-landing-tile-image-bg);
+}
+@utility bg-landing-tile-tile-bg {
+  background-image: var(--bg-landing-tile-tile-bg);
+}
+@utility bg-landing-tile-border-bg {
+  background-image: var(--bg-landing-tile-border-bg);
+}
+@utility bg-landing-tile-grid-bg {
+  background-image: var(--bg-landing-tile-grid-bg);
+}
+@utility bg-landing-tile-grid-mobile-bg {
+  background-image: var(--bg-landing-tile-grid-mobile-bg);
+}
+@utility bg-landing-stats-bg {
+  background-image: var(--bg-landing-stats-bg);
+}
+@utility bg-landing-stats-border-bg {
+  background-image: var(--bg-landing-stats-border-bg);
+}
+@utility bg-landing-stats-text-dark {
+  background-image: var(--bg-landing-stats-text-dark);
+}
+@utility bg-landing-stats-text {
+  background-image: var(--bg-landing-stats-text);
+}
+@utility bg-landing-playground-bg {
+  background-image: var(--bg-landing-playground-bg);
+}
+@utility bg-landing-playground-slide-left-bg {
+  background-image: var(--bg-landing-playground-slide-left-bg);
+}
+@utility bg-landing-playground-slide-right-bg {
+  background-image: var(--bg-landing-playground-slide-right-bg);
+}
+@utility bg-landing-trusted-by-developers-dark {
+  background-image: var(--bg-landing-trusted-by-developers-dark);
+}
+@utility bg-landing-trusted-by-developers {
+  background-image: var(--bg-landing-trusted-by-developers);
+}
+@utility bg-landing-packages-dark {
+  background-image: var(--bg-landing-packages-dark);
+}
+@utility bg-landing-packages {
+  background-image: var(--bg-landing-packages);
+}
+@utility bg-landing-sweet-spot-glow-red-dark {
+  background-image: var(--bg-landing-sweet-spot-glow-red-dark);
+}
+@utility bg-landing-sweet-spot-glow-yellow-dark {
+  background-image: var(--bg-landing-sweet-spot-glow-yellow-dark);
+}
+@utility bg-landing-sweet-spot-glow-orange-dark {
+  background-image: var(--bg-landing-sweet-spot-glow-orange-dark);
+}
+@utility bg-landing-sweet-spot-glow-cyan-dark {
+  background-image: var(--bg-landing-sweet-spot-glow-cyan-dark);
+}
+@utility bg-landing-sweet-spot-glow-blue-dark {
+  background-image: var(--bg-landing-sweet-spot-glow-blue-dark);
+}
+@utility bg-landing-sweet-spot-glow-indigo-dark {
+  background-image: var(--bg-landing-sweet-spot-glow-indigo-dark);
+}
+@utility bg-landing-sweet-spot-glow-red-light {
+  background-image: var(--bg-landing-sweet-spot-glow-red-light);
+}
+@utility bg-landing-sweet-spot-glow-yellow-light {
+  background-image: var(--bg-landing-sweet-spot-glow-yellow-light);
+}
+@utility bg-landing-sweet-spot-glow-orange-light {
+  background-image: var(--bg-landing-sweet-spot-glow-orange-light);
+}
+@utility bg-landing-sweet-spot-glow-cyan-light {
+  background-image: var(--bg-landing-sweet-spot-glow-cyan-light);
+}
+@utility bg-landing-sweet-spot-glow-blue-light {
+  background-image: var(--bg-landing-sweet-spot-glow-blue-light);
+}
+@utility bg-landing-sweet-spot-glow-indigo-light {
+  background-image: var(--bg-landing-sweet-spot-glow-indigo-light);
+}
+@utility bg-landing-packages-text {
+  background-image: var(--bg-landing-packages-text);
+}
+@utility bg-landing-packages-text-dark {
+  background-image: var(--bg-landing-packages-text-dark);
+}
+@utility bg-hackathon-button-bg {
+  background-image: var(--bg-hackathon-button-bg);
+}
+@utility bg-refine-week-supabase-timeline-item-bg {
+  background-image: var(--bg-refine-week-supabase-timeline-item-bg);
+}
+@utility bg-refine-week-supabase-timeline-item-bg-lg {
+  background-image: var(--bg-refine-week-supabase-timeline-item-bg-lg);
+}
+@utility bg-refine-week-strapi-timeline-item-bg {
+  background-image: var(--bg-refine-week-strapi-timeline-item-bg);
+}
+@utility bg-refine-week-strapi-timeline-item-bg-lg {
+  background-image: var(--bg-refine-week-strapi-timeline-item-bg-lg);
+}
+@utility bg-week-of-refine-strapi-card {
+  background-image: var(--bg-week-of-refine-strapi-card);
+}
+@utility bg-week-of-refine-supabase-card {
+  background-image: var(--bg-week-of-refine-supabase-card);
+}
+@utility bg-week-of-refine-strapi-card-light {
+  background-image: var(--bg-week-of-refine-strapi-card-light);
+}
+@utility bg-week-of-refine-supabase-card-light {
+  background-image: var(--bg-week-of-refine-supabase-card-light);
+}
+@utility bg-banner-examples-gray {
+  background-image: var(--bg-banner-examples-gray);
+}
+@utility bg-banner-examples-purple {
+  background-image: var(--bg-banner-examples-purple);
+}
+@utility bg-banner-examples-modal-gray {
+  background-image: var(--bg-banner-examples-modal-gray);
+}
+@utility bg-banner-examples-modal-purple {
+  background-image: var(--bg-banner-examples-modal-purple);
+}
+@utility bg-banner-examples-sider-gray {
+  background-image: var(--bg-banner-examples-sider-gray);
+}
+@utility bg-banner-examples-sider-purple {
+  background-image: var(--bg-banner-examples-sider-purple);
+}
+@utility bg-banner-examples-text {
+  background-image: var(--bg-banner-examples-text);
+}
+@utility bg-top-announcement-text {
+  background-image: var(--bg-top-announcement-text);
+}
+@utility bg-sidebar-item-shiny-dark {
+  background-image: var(--bg-sidebar-item-shiny-dark);
+}
+@utility bg-sidebar-item-shiny-light {
+  background-image: var(--bg-sidebar-item-shiny-light);
+}
+@utility bg-top-announcement-bg-tr {
+  background-image: var(--bg-top-announcement-bg-tr);
+}
+@utility bg-landing-hero-item-name-gradient {
+  background-image: var(--bg-landing-hero-item-name-gradient);
+}
+@utility bg-landing-hero-item-background {
+  background-image: var(--bg-landing-hero-item-background);
+}
+@utility bg-landing-hero-beam-bottom {
+  background-image: var(--bg-landing-hero-beam-bottom);
+}
+@utility bg-landing-hero-beam-bottom-light {
+  background-image: var(--bg-landing-hero-beam-bottom-light);
+}
+@utility bg-landing-hero-github-stars-gradient {
+  background-image: var(--bg-landing-hero-github-stars-gradient);
+}
+@utility bg-landing-hero-github-stars-text-light {
+  background-image: var(--bg-landing-hero-github-stars-text-light);
+}
+@utility bg-landing-hero-github-stars-text-dark {
+  background-image: var(--bg-landing-hero-github-stars-text-dark);
+}
+@utility bg-landing-hero-xray-dot-center-bg {
+  background-image: var(--bg-landing-hero-xray-dot-center-bg);
+}
+@utility bg-landing-hero-xray-dot-center-bg-light {
+  background-image: var(--bg-landing-hero-xray-dot-center-bg-light);
+}
+@utility bg-landing-wizard-option-bg-dark {
+  background-image: var(--bg-landing-wizard-option-bg-dark);
+}
+@utility bg-landing-wizard-option-bg-light {
+  background-image: var(--bg-landing-wizard-option-bg-light);
+}
+@utility bg-landing-hero-beam-bg {
+  background-image: var(--bg-landing-hero-beam-bg);
+}
+@utility bg-footer-landing-dark-bg {
+  background-image: var(--bg-footer-landing-dark-bg);
+}
+@utility bg-footer-blog-dark-bg {
+  background-image: var(--bg-footer-blog-dark-bg);
+}
+@utility bg-footer-blog-light-bg {
+  background-image: var(--bg-footer-blog-light-bg);
+}
+@utility bg-landing-wizard-side-bg {
+  background-image: var(--bg-landing-wizard-side-bg);
+}
+@utility bg-landing-wizard-side-bg-light {
+  background-image: var(--bg-landing-wizard-side-bg-light);
+}
+@utility bg-landing-copy-command-hover-bg-dark {
+  background-image: var(--bg-landing-copy-command-hover-bg-dark);
+}
+@utility bg-landing-copy-command-hover-bg-light {
+  background-image: var(--bg-landing-copy-command-hover-bg-light);
+}
+@utility bg-enterprise-copy-command-hover-bg-dark {
+  background-image: var(--bg-enterprise-copy-command-hover-bg-dark);
+}
+@utility bg-enterprise-copy-command-hover-bg-light {
+  background-image: var(--bg-enterprise-copy-command-hover-bg-light);
+}
+@utility bg-enterprise-cta-dark {
+  background-image: var(--bg-enterprise-cta-dark);
+}
+@utility bg-enterprise-cta-dark-md {
+  background-image: var(--bg-enterprise-cta-dark-md);
+}
+@utility bg-enterprise-cta-light {
+  background-image: var(--bg-enterprise-cta-light);
+}
+@utility bg-enterprise-cta-light-md {
+  background-image: var(--bg-enterprise-cta-light-md);
+}
+@utility bg-enterprise-data-source-dark {
+  background-image: var(--bg-enterprise-data-source-dark);
+}
+@utility bg-enterprise-frequent-updates-dark {
+  background-image: var(--bg-enterprise-frequent-updates-dark);
+}
+@utility bg-enterprise-frequent-updates-light {
+  background-image: var(--bg-enterprise-frequent-updates-light);
+}
+@utility bg-enterprise-frequent-updates-dark-md {
+  background-image: var(--bg-enterprise-frequent-updates-dark-md);
+}
+@utility bg-enterprise-frequent-updates-light-md {
+  background-image: var(--bg-enterprise-frequent-updates-light-md);
+}
+@utility bg-new-badge-border-dark {
+  background-image: var(--bg-new-badge-border-dark);
+}
+@utility bg-new-badge-border-light {
+  background-image: var(--bg-new-badge-border-light);
+}
+@utility bg-purple-new-badge-border-dark {
+  background-image: var(--bg-purple-new-badge-border-dark);
+}
+@utility bg-purple-new-badge-border-light {
+  background-image: var(--bg-purple-new-badge-border-light);
+}
+@utility bg-enterprise-cta-button-bg-light {
+  background-image: var(--bg-enterprise-cta-button-bg-light);
+}
+@utility bg-enterprise-cta-button-bg-dark {
+  background-image: var(--bg-enterprise-cta-button-bg-dark);
+}
+@utility bg-landing-wai-sunshine-light {
+  background-image: var(--bg-landing-wai-sunshine-light);
+}
+@utility bg-landing-wai-sunshine-dark {
+  background-image: var(--bg-landing-wai-sunshine-dark);
+}
+@utility bg-landing-wai-grid-light {
+  background-image: var(--bg-landing-wai-grid-light);
+}
+@utility bg-landing-wai-grid-dark {
+  background-image: var(--bg-landing-wai-grid-dark);
+}
+@utility bg-landing-wai-bg-dark {
+  background-image: var(--bg-landing-wai-bg-dark);
+}
+@utility bg-refine-ai-page-bg-dark {
+  background-image: var(--bg-refine-ai-page-bg-dark);
+}
+@utility bg-refine-ai-page-bg-light {
+  background-image: var(--bg-refine-ai-page-bg-light);
+}

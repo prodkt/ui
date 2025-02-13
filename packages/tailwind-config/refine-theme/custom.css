@@ -1,0 +1,330 @@
+@utility animation-running {
+  animation-play-state: running;
+}
+@utility animation-initial {
+  animation-play-state: initial;
+}
+@utility animation-paused {
+  animation-play-state: paused;
+}
+@utility animation-slower-speed {
+  animation-duration: 5s;
+}
+@utility animation-slow-speed {
+  animation-duration: 4s;
+}
+@utility animation-normal-speed {
+  animation-duration: 3s;
+}
+@utility animation-fast-speed {
+  animation-duration: 2s;
+}
+@utility animation-faster-speed {
+  animation-duration: 1s;
+}
+@utility landing-mask-image-bg {
+  mask-image: url("/assets/refine-theme/hero-bottom-bg.svg");
+  mask-size: 1920px 288px;
+  mask-position: center;
+}
+
+@utility landing-image-bottom-mobile-bg {
+  mask-image: url("/assets/refine-theme/hero-video-bottom-mobile.svg");
+  mask-size: 620px 350px;
+  mask-position: top;
+}
+
+@screen landing-sm {
+  .landing-image-bottom-mobile-bg {
+    mask-image: url("/assets/refine-theme/hero-video-bottom-mobile.svg");
+    mask-size: 720px 316px;
+    mask-position: top;
+  }
+}
+
+@screen landing-md {
+  .landing-image-bottom-mobile-bg {
+    mask-image: url("/assets/refine-theme/hero-video-bottom-mobile.svg");
+    mask-size: 1080px 474px;
+    mask-position: top;
+  }
+}
+
+@utility landing-wide-mask {
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 1%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 99%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: 1920px 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+@utility landing-playground-slide-mask {
+  mask-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 1) 37.5%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0.4) 75.5%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  mask-size: 100% 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+@utility bg-landing-component-dark {
+  background: radial-gradient(
+      66.67% 50% at 50% 0%,
+      rgba(108, 119, 147, 0.15) 0%,
+      rgba(108, 119, 147, 0) 100%
+    ),
+    radial-gradient(
+      66.67% 50% at 50% 100%,
+      rgba(108, 119, 147, 0.05) 0%,
+      rgba(108, 119, 147, 0) 100%
+    ), var(--900, #14141f);
+}
+
+@utility bg-landing-component {
+  border-radius: 8px;
+  background: radial-gradient(
+      66.67% 50% at 50% 0%,
+      rgba(31, 173, 102, 0.25) 0%,
+      rgba(31, 173, 102, 0) 100%
+    ),
+    radial-gradient(
+      66.67% 50% at 50% 100%,
+      rgba(31, 173, 102, 0.1) 0%,
+      rgba(31, 173, 102, 0) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(31, 173, 102, 0.03) 0%,
+      rgba(31, 173, 102, 0.03) 100%
+    ), #fff;
+}
+
+.landing-mask-image-hero-wide {
+  @apply xl:landing-wide-mask;
+}
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: rgb(24, 144, 255);
+  --ifm-color-primary-dark: rgb(21, 132, 235);
+  --ifm-color-primary-darker: rgb(18, 120, 215);
+  --ifm-color-primary-darkest: rgb(6, 100, 187);
+  --ifm-color-primary-light: rgb(45, 154, 255);
+  --ifm-color-primary-lighter: rgb(62, 162, 255);
+  --ifm-color-primary-lightest: rgb(105, 183, 255);
+  /* --ifm-color-primary: rgb(37, 194, 160);
+    --ifm-color-primary-dark: rgb(33, 175, 144);
+    --ifm-color-primary-darker: rgb(31, 165, 136);
+    --ifm-color-primary-darkest: rgb(26, 136, 112);
+    --ifm-color-primary-light: rgb(70, 203, 174);
+    --ifm-color-primary-lighter: rgb(102, 212, 189);
+    --ifm-color-primary-lightest: rgb(146, 224, 208); */
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-height: 64px;
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.05);
+  --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.05);
+  --ifm-navbar-sidebar-width: 100%;
+  --ifm-table-cell-padding: 6px 8px;
+  /* aliemir theme overrides start */
+  /* --ifm-scrollbar-thumb-hover-background-color: transparent; */
+  --doc-sidebar-width: 270px !important;
+  --ifm-scrollbar-track-background-color: transparent !important;
+  --ifm-menu-link-padding-horizontal: 0.375rem;
+  --ifm-menu-link-padding-vertical: 0.375rem;
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-breadcrumb-spacing: 0.25rem;
+  --ifm-breadcrumb-padding-horizontal: 0.4rem;
+  --ifm-font-color-base: #3a3e4a;
+  --tutorial-toc-bg-color: #f1f5f9;
+  --tutorial-toc-text-color: #292d3e;
+  --tutorial-toc-text-color-dark: #252527;
+  --tutorial-toc-text-color-light: #6b7280;
+  --prism-background-color: #292d3e;
+  --browser-window-bezel-color: #ebedf0;
+  --browser-window-bezel-color-accent: #ebedf0;
+  --ifm-alert-border-radius: 0.25rem;
+  --ifm-alert-shadow: 0.5px 1px 1px 0px rgba(0, 0, 0, 0.15);
+  /* var(--ifm-font-size-base)/var(--ifm-line-height-base) var(--ifm-font-family-base) */
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23a8a8a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-up'%3E%3Cpolyline points='18 15 12 9 6 15'%3E%3C/polyline%3E%3C/svg%3E");
+  --primary-font-sans: "Inter";
+  --ifm-font-family-base:
+    var(--font-sans), system-ui, -apple-system,
+    "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* aliemir theme overrides end */
+  --tutorial-card-bg: var(--ifm-card-background-color);
+  --tutorial-card-bg-hover: var(--ifm-card-background-color);
+}
+
+[data-theme="dark"] {
+  --tutorial-card-bg: #252527;
+  --tutorial-card-bg-hover: #2c2e33;
+  --ifm-font-color-base: #f6f6f9;
+  --docusaurus-highlighted-code-line-bg: #303450;
+  --browser-window-bezel-color: #292d3e;
+  --browser-window-bezel-color-accent: #4e5264;
+  --tutorial-toc-bg-color: #27272a;
+  --tutorial-toc-text-color: #ebedf0;
+  --tutorial-toc-text-color-dark: #f1f1f1;
+  --tutorial-toc-text-color-light: #dddee0;
+}
+
+.banner-container {
+  background-color: #f8f8f8;
+  padding: 18px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.banner-container.dark {
+  background: linear-gradient(to bottom, #2f2f2f, #000000);
+  color: #ffffff;
+}
+
+.banner-header {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+[class^="announcementBar"] {
+  border: none !important;
+}
+
+.tutorial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+  gap: 16px;
+}
+
+.tutorial-cards > a {
+  width: 100%;
+}
+
+.checklist-container {
+  @apply rounded px-6 py-5 mb-7;
+  border-left: 5px solid var(--ifm-color-primary);
+  background-color: var(--tutorial-toc-bg-color);
+}
+
+.checklist-container__title {
+  @apply text-2xl font-bold text-sky-600 mb-4 flex items-center flex-wrap gap-2;
+  color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .checklist-item__button {
+  border-color: var(--browser-window-bezel-color-accent);
+  background-color: #3a3e4a;
+}
+
+.sourcecode-badge {
+  @apply appearance-none no-underline text-xs font-bold bg-slate-800 text-white;
+  font-size: 12px;
+  line-height: 13px;
+  height: 22px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  vertical-align: middle;
+
+  text-decoration: none;
+  background-color: #24292f;
+  color: white;
+}
+
+.sourcecode-badge:hover,
+.sourcecode-badge:active,
+.sourcecode-badge:focus,
+.sourcecode-badge:visited {
+  text-decoration: none;
+  background-color: #24292f;
+  color: white;
+}
+
+html[data-theme="dark"] .sourcecode-badge {
+  background-color: var(--ifm-color-secondary);
+  color: #24292f;
+}
+
+.sourcecode-badge svg {
+  margin-right: 6px;
+  height: 13px;
+  width: 13px;
+  margin-bottom: -2px;
+}
+
+@utility bg-top-announcement {
+  border-bottom: 1px solid rgba(71, 235, 235, 0.15);
+  background: radial-gradient(
+      218.19% 111.8% at 0% 0%,
+      rgba(71, 235, 235, 0.1) 0%,
+      rgba(71, 235, 235, 0.2) 100%
+    ), #14141f;
+}
+
+@utility top-announcement-mask {
+  mask-image: url("/assets/refine-theme/hexagon.svg");
+  mask-repeat: repeat;
+  background: rgba(71, 235, 235, 0.25);
+}
+
+@utility refine-info-badge {
+  margin-bottom: 2px;
+}
+
+@utility landing-packages-mask {
+  mask-image: linear-gradient(
+    92.03deg,
+    rgba(0, 0, 0, 0) 3.05%,
+    #000000 25%,
+    #000000 50%,
+    #000000 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+}
+
+@utility landing-react-code-mask-dark {
+  mask-image: radial-gradient(
+    100% 100% at 0% 0%,
+    rgba(217, 217, 217, 0.5) 0%,
+    rgba(217, 217, 217, 0.5) 25%,
+    rgba(217, 217, 217, 0.5) 50%,
+    #d9d9d9 75%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
+
+@utility landing-react-code-mask {
+  mask-image: radial-gradient(
+    100% 100% at 0% 0%,
+    rgba(217, 217, 217, 0.5) 0%,
+    rgba(217, 217, 217, 0.5) 25%,
+    #d9d9d9 50%,
+    #d9d9d9 75%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
+
+@utility landing-sweet-spot-mask {
+  mask-image: linear-gradient(
+    90deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.25) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

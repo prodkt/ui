@@ -1,0 +1,31 @@
+@theme {
+  --breakpoint-content-sm: 480px;
+  --breakpoint-widening-start: 544px;
+  --breakpoint-content-md: 656px;
+  --breakpoint-content-xm: 768px;
+  --breakpoint-content-xl: 792px;
+  --breakpoint-content-xl-safe: 1376px;
+  --breakpoint-content-2xl: 864px;
+  --breakpoint-content-4xl: 1536px;
+  --breakpoint-header-sm: 640px;
+  --breakpoint-header-md: 1200px;
+  --breakpoint-landing-content: 944px;
+  --breakpoint-landing-xs: 360px;
+  --breakpoint-landing-sm: 720px;
+  --breakpoint-landing-md: 960px;
+  --breakpoint-landing-lg: 1296px;
+  --breakpoint-landing-xl: 1440px;
+  --breakpoint-tutorial-sm: 720px;
+  --breakpoint-tutorial-md: 960px;
+  --breakpoint-tutorial-lg: 1440px;
+  --breakpoint-landing-footer: 1264px;
+  --breakpoint-blog-sm: 592px;
+  --breakpoint-blog-md: 720px;
+  --breakpoint-blog-lg: 960px;
+  --breakpoint-blog-max: 1296px;
+  --breakpoint-blog-xl: 1440px;
+  --breakpoint-blog-2xl: 1600px;
+  --breakpoint-walkthrough: 976px;
+  --breakpoint-doc-form-lg: 824px;
+  --breakpoint-doc-form-md: 688px;
+}
