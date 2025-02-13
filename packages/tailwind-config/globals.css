@@ -9,8 +9,20 @@
 @import "tailwindcss";
 
 /* local styles - update the below if you add a new style */
+@import "./refine-theme/backgrounds.css";
+@import "./refine-theme/breakpoints.css";
+@import "./refine-theme/animate.css";
+@import "./refine-theme/keyframes.css";
+@import "./refine-theme/color.css";
+@import "./refine-theme/masks.css";
+@import "./refine-theme/position.css";
+@import "./refine-theme/custom.css";
+@import "./uno-theme/effects.css";
+@import "./uno-theme/color.css";
+@import "./uno-theme/typography.css";
 @import "./radix.css";
 @import "./radix-dark.css";
+/* @import "./radius.css"; */
 @import "./prodkt.css";
 @import "./theme.css";
 @import "./theme.utilities.css";
@@ -24,7 +36,7 @@
 @source './../../apps/docs/node_modules/fumadocs-ui/dist/**/*.js';
 
 /* plugins - update the below if you add a new plugin */
-@plugin "tailwindcss-animate";
+/* @plugin "tailwindcss-animate"; */
 @plugin 'tailwind-scrollbar-hide';
 @plugin "./motion";
 

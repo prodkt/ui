@@ -1,0 +1,382 @@
+@theme {
+  @keyframes refine-ai-video-play-button {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      transform: scale3d(1.22, 1.22, 1.22);
+    }
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes progressFill {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes code-scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-448px);
+    }
+  }
+
+  @keyframes walkthrough-bounce {
+    0% {
+      transform: translateY(4%);
+    }
+    50% {
+      transform: none;
+    }
+    100% {
+      transform: translateY(4%);
+    }
+  }
+
+  @keyframes hackathon-button-bg {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  @keyframes landing-hero-beat {
+    0% {
+      opacity: 0.4;
+    }
+    5% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes playground-slide-down-mobile {
+    0% {
+      transform: translateY(0px);
+    }
+    99.99% {
+      transform: translateY(-1655px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes playground-slide-down {
+    0% {
+      transform: translateY(0px);
+    }
+    99.99% {
+      transform: translateY(-3329px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes playground-slide-up-mobile {
+    0% {
+      transform: translateY(-1655px);
+    }
+    99.99% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-1655px);
+    }
+  }
+
+  @keyframes playground-slide-up {
+    0% {
+      transform: translateY(-3328px);
+    }
+    99.99% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-3328px);
+    }
+  }
+
+  @keyframes top-announcement-glow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes landing-hero-grid-beats {
+    0% {
+      fill-opacity: 0;
+    }
+    50% {
+      fill-opacity: 0.8;
+    }
+    100% {
+      fill-opacity: 0;
+    }
+  }
+
+  @keyframes hero-logo-pulse {
+    0% {
+      fill-opacity: 1;
+    }
+    50% {
+      fill-opacity: 0.75;
+    }
+    100% {
+      fill-opacity: 1;
+    }
+  }
+
+  @keyframes mini-bounce {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-8%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes dot-waves {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes landing-packages-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes landing-packages-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  @keyframes beam-spin {
+    0% {
+      transform: translateX(-45px) translateY(-190px) translateZ(0) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-45px) translateY(-190px) translateZ(0)
+        rotate(-360deg);
+    }
+  }
+
+  @keyframes landing-hero-beam-line {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes landing-hero-beam-glow {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes landing-hero-beam-bottom {
+    0% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scaleX(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes showcase-bottom-fade-reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(96px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes opacity-reveal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes wheel-already-invented-reveal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes showcase-reveal {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes github-stars-border {
+    0% {
+      transform: translateX(-72px);
+    }
+    100% {
+      transform: translateX(216px);
+    }
+  }
+
+  @keyframes github-stars-glow {
+    0% {
+      transform: translateX(0) scale(0.5);
+    }
+    50% {
+      transform: translateX(78px) scale(1);
+    }
+    100% {
+      transform: translateX(156px) scale(0.5);
+    }
+  }
+
+  @keyframes enterprise-iam-services-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes enterprise-iam-services-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  @keyframes enterprise-data-source-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes enterprise-data-source-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  @keyframes enterprise-table-left-to-right {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes enterprise-table-right-to-left {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes new-badge-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
