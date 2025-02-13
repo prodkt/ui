@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_pendo",
+  "name": "logomark_pendo",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_pendo.tsx",
+      "content": "import * as React from \"react\"\nimport { SVGProps } from \"react\"\n\nexport const PendoLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={21}\n    height={20}\n    viewBox=\"0 0 21 20\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <g clipPath=\"url(#pendo-logomark-a)\">\n      <path\n        fillRule=\"evenodd\"\n        clipRule=\"evenodd\"\n        d=\"M.548 9.894h9.861v9.642l9.861-9.642V.252h-9.86L.547 9.894Z\"\n        fill=\"#FF4876\"\n      />\n    </g>\n    <defs>\n      <clipPath id=\"pendo-logomark-a\">\n        <path fill=\"currentColor\" transform=\"translate(.5)\" d=\"M0 0h20v20H0z\" />\n      </clipPath>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_pendo.tsx"
+    }
+  ]
+}

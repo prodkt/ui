@@ -26,6 +26,7 @@ type PreviewProps = {
   name: string;
   code: string;
   shadcn?: boolean;
+  logos?: boolean;
   dependencies?: Record<string, string>;
 };
 
@@ -45,20 +46,22 @@ export const Preview = async ({
   code,
   dependencies: demoDependencies,
   shadcn,
+  logos,
 }: PreviewProps) => {
-  const registry = shadcn
-    ? ((await import(`../../public/registry/primitive/${name}.json`)) as {
-        dependencies?: Record<string, string>;
-        devDependencies?: Record<string, string>;
-        registryDependencies?: Record<string, string>;
-        files?: { content: string }[];
-      })
-    : ((await import(`../../public/registry/${name}.json`)) as {
-        dependencies?: Record<string, string>;
-        devDependencies?: Record<string, string>;
-        registryDependencies?: Record<string, string>;
-        files?: { content: string }[];
-      });
+  let registry: {
+    dependencies?: Record<string, string>;
+    devDependencies?: Record<string, string>;
+    registryDependencies?: Record<string, string>;
+    files?: { content: string }[];
+  };
+
+  if (shadcn) {
+    registry = await import(`../../public/registry/primitive/${name}.json`);
+  } else if (logos) {
+    registry = await import(`../../public/registry/logos/${name}.json`);
+  } else {
+    registry = await import(`../../public/registry/${name}.json`);
+  }
 
   const dependencies: Record<string, string> = {};
   const devDependencies: Record<string, string> = {};
@@ -70,15 +73,75 @@ export const Preview = async ({
     '/lib/content.ts': content,
   };
 
-  const parseShadcnComponents = async (str: string) => {
+  const parseLogosComponents = async (str: string) => {
     const parsedString = parseContent(str);
+
     const matches = parsedString.match(
-      /@\/components\/ui\/(?!prodkt-ui\/)([^'"\s]+)/g
+      /from ['"]@\/components\/ui\/logos\/([^'"]+)['"]/g
     );
 
     if (matches) {
       const components = [
-        ...new Set(matches.map((m) => m.replace('@/components/ui/', ''))),
+        ...new Set(
+          matches.map((m) =>
+            m
+              .replace(/from ['"]@\/components\/ui\/logos\//, '')
+              .replace(/['"]$/, '')
+          )
+        ),
+      ];
+
+      for (const component of components) {
+        try {
+          const mod = (await import(
+            `../../public/registry/logos/${component}.json`
+          )) as {
+            name: string;
+            dependencies?: Record<string, string>;
+            devDependencies?: Record<string, string>;
+            files?: { content: string }[];
+          };
+
+          files[`/components/ui/logos/${mod.name}.tsx`] = parseContent(
+            mod.files?.[0]?.content ?? ''
+          );
+
+          if (mod.dependencies) {
+            for (const dep of Object.values(mod.dependencies)) {
+              const { name, version } = parseDependencyVersion(dep);
+              dependencies[name] = version;
+            }
+          }
+
+          if (mod.devDependencies) {
+            for (const dep of Object.values(mod.devDependencies)) {
+              const { name, version } = parseDependencyVersion(dep);
+              devDependencies[name] = version;
+            }
+          }
+
+          await parseLogosComponents(mod.files?.[0]?.content ?? '');
+        } catch (error) {
+          console.warn(`Failed to load logos component: ${component}`);
+        }
+      }
+    }
+  };
+
+  const parseShadcnComponents = async (str: string) => {
+    const parsedString = parseContent(str);
+
+    const matches = parsedString.match(
+      /from ['"]@\/components\/ui\/(?!logos\/)(?!prodkt-ui\/)([^'"]+)['"]/g
+    );
+
+    if (matches) {
+      const components = [
+        ...new Set(
+          matches.map((m) =>
+            m.replace(/from ['"]@\/components\/ui\//, '').replace(/['"]$/, '')
+          )
+        ),
       ];
 
       for (const component of components) {
@@ -125,14 +188,20 @@ export const Preview = async ({
   const selectedComponent = registry.files?.[0]?.content;
   const selectedComponentContent = parseContent(selectedComponent ?? '');
 
-  await parseShadcnComponents(selectedComponentContent);
+  if (logos) {
+    await parseLogosComponents(selectedComponentContent);
+    files[`/components/ui/logos/${name}.tsx`] = parseContent(
+      selectedComponentContent
+    );
+  } else {
+    await parseShadcnComponents(selectedComponentContent);
+    files[`/components/ui/prodkt-ui/${name}.tsx`] = parseContent(
+      selectedComponentContent
+    );
+  }
 
-  files[`/components/ui/prodkt-ui/${name}.tsx`] = parseContent(
-    selectedComponentContent
-  );
-
-  // Load required dependencies from selected Prodkt UI component
   if (registry.dependencies) {
+    // Load required dependencies from selected Prodkt UI component
     for (const dep of Object.values(registry.dependencies)) {
       const { name, version } = parseDependencyVersion(dep);
 
@@ -140,8 +209,8 @@ export const Preview = async ({
     }
   }
 
-  // Load required devDependencies from selected Prodkt UI component
   if (registry.devDependencies) {
+    // Load required devDependencies from selected Prodkt UI component
     for (const dep of Object.values(registry.devDependencies)) {
       const { name, version } = parseDependencyVersion(dep);
 
@@ -149,47 +218,56 @@ export const Preview = async ({
     }
   }
 
-  // Process registry dependencies
   if (registry.registryDependencies) {
+    // Process registry dependencies
     for (const dependency of Object.values(registry.registryDependencies)) {
-      const mod = (await import(`./shadcn/${dependency}.json`)) as {
+      let mod: {
         name: string;
         dependencies?: Record<string, string>;
         devDependencies?: Record<string, string>;
         files?: { content: string }[];
       };
 
-      // Load required shadcn/ui component
-      const componentContent = mod.files?.[0]?.content ?? '';
-      files[`/components/ui/${mod.name}.tsx`] = parseContent(componentContent);
+      if (logos) {
+        mod = await import(`../../public/registry/logos/${dependency}.json`);
+        const componentContent = mod.files?.[0]?.content ?? '';
+        files[`/components/ui/logos/${dependency}.tsx`] =
+          parseContent(componentContent);
+        await parseLogosComponents(componentContent);
+      } else {
+        mod = await import(`./shadcn/${dependency}.json`);
+        const componentContent = mod.files?.[0]?.content ?? '';
+        files[`/components/ui/${mod.name}.tsx`] =
+          parseContent(componentContent);
 
-      // Load required dependencies from shadcn/ui component
-      if (mod.dependencies) {
-        for (const dep of Object.values(mod.dependencies)) {
-          const { name, version } = parseDependencyVersion(dep);
+        if (mod.dependencies) {
+          // Load required dependencies from shadcn/ui component
+          for (const dep of Object.values(mod.dependencies)) {
+            const { name, version } = parseDependencyVersion(dep);
 
-          dependencies[name] = version;
+            dependencies[name] = version;
+          }
         }
-      }
+        if (mod.devDependencies) {
+          // Load required shadcn/ui component
 
-      // Load required devDependencies from shadcn/ui component
-      if (mod.devDependencies) {
-        for (const dep of Object.values(mod.devDependencies)) {
-          const { name, version } = parseDependencyVersion(dep);
+          // Load required devDependencies from shadcn/ui component
+          for (const dep of Object.values(mod.devDependencies)) {
+            const { name, version } = parseDependencyVersion(dep);
 
-          devDependencies[name] = version;
+            devDependencies[name] = version;
+          }
         }
+        await parseShadcnComponents(componentContent);
       }
-
-      await parseShadcnComponents(componentContent);
     }
   }
 
   // Scan the demo code for any imports of shadcn/ui components
   await parseShadcnComponents(code);
-
-  // Load demo dependencies
+  await parseLogosComponents(code);
   if (demoDependencies) {
+    // Load demo dependencies
     for (const [name, version] of Object.entries(demoDependencies)) {
       dependencies[name] = version;
     }

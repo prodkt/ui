@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_dp",
+  "name": "logomark_dp",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_dp.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const DpLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={24}\n    height={24}\n    viewBox=\"0 0 24 24\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <path\n      d=\"M4 3.04V.8c0-.453-.347-.8-.8-.8-.453 0-.8.347-.8.8v2.24A3.178 3.178 0 0 0 0 6.134a3.178 3.178 0 0 0 2.4 3.093V23.2c0 .454.347.8.8.8.453 0 .8-.346.8-.8V9.227a3.178 3.178 0 0 0 2.4-3.093A3.178 3.178 0 0 0 4 3.04Zm-.8 4.693c-.88 0-1.6-.72-1.6-1.6 0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6Zm9.6 1.174V.8c0-.453-.347-.8-.8-.8-.453 0-.8.347-.8.8v8.107A3.178 3.178 0 0 0 8.8 12a3.178 3.178 0 0 0 2.4 3.094V23.2c0 .454.347.8.8.8.453 0 .8-.346.8-.8v-8.106A3.178 3.178 0 0 0 15.2 12a3.178 3.178 0 0 0-2.4-3.093ZM12 13.6c-.88 0-1.6-.72-1.6-1.6 0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6Zm9.6 1.174V.8c0-.453-.347-.8-.8-.8-.453 0-.8.347-.8.8v13.974a3.178 3.178 0 0 0-2.4 3.093A3.178 3.178 0 0 0 20 20.96v2.24c0 .453.347.8.8.8.453 0 .8-.347.8-.8v-2.24a3.178 3.178 0 0 0 2.4-3.093 3.178 3.178 0 0 0-2.4-3.094Zm-.8 4.693c-.88 0-1.6-.72-1.6-1.6 0-.88.72-1.6 1.6-1.6.88 0 1.6.72 1.6 1.6 0 .88-.72 1.6-1.6 1.6Z\"\n      fill=\"url(#dp_svg__a)\"\n    />\n    <defs>\n      <linearGradient\n        id=\"dp_svg__a\"\n        x1={12.054}\n        y1={2.068}\n        x2={12.054}\n        y2={24}\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"#67BFFF\" />\n        <stop offset={1} stopColor=\"#3F54E6\" />\n      </linearGradient>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_dp.tsx"
+    }
+  ]
+}

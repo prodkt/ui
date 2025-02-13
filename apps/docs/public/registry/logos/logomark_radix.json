@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_radix",
+  "name": "logomark_radix",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_radix.tsx",
+      "content": "import * as React from \"react\"\nimport { SVGProps } from \"react\"\n\nexport const RadixLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={15}\n    height={20}\n    viewBox=\"0 0 15 20\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <g clipPath=\"url(#radix-logomark-a)\" fill=\"currentColor\">\n      <path d=\"M7.25 19.555c-3.222 0-5.833-2.798-5.833-6.25s2.611-6.25 5.833-6.25v12.5ZM7.25.388H1.417v5.834H7.25V.388ZM11 6.222a2.917 2.917 0 1 0 0-5.834 2.917 2.917 0 0 0 0 5.834Z\" />\n    </g>\n    <defs>\n      <clipPath id=\"radix-logomark-a\">\n        <path fill=\"currentColor\" transform=\"translate(.5)\" d=\"M0 0h14v20H0z\" />\n      </clipPath>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_radix.tsx"
+    }
+  ]
+}

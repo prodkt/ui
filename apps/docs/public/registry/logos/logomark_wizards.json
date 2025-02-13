@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_wizards",
+  "name": "logomark_wizards",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_wizards.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const WizardsLogomark = (props: SVGProps<SVGSVGElement>) => {\n  return (\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      width={24}\n      height={24}\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n      {...props}\n    >\n      <path\n        fill=\"currentColor\"\n        d=\"M15.77 11.964a.75.75 0 0 0 .92-.419l.666-1.498a.665.665 0 0 1 .534-.391l1.443-.16a.75.75 0 0 0 .447-1.276l-1.2-1.201a.665.665 0 0 1-.18-.615l.332-1.491a.75.75 0 0 0-1.13-.799l-1.25.781a.665.665 0 0 1-.704 0l-1.25-.781a.75.75 0 0 0-1.13.799l.331 1.491a.665.665 0 0 1-.179.615l-1.2 1.2a.75.75 0 0 0 .447 1.276l1.443.16a.665.665 0 0 1 .534.392l.666 1.498a.747.747 0 0 0 .46.419ZM11.344 9.827a5.016 5.016 0 0 0 2.829 2.829l-6.759 6.758a2 2 0 1 1-2.828-2.828l6.758-6.759Z\"\n      />\n    </svg>\n  )\n}\n",
+      "target": "components/ui/logos/logomark_wizards.tsx"
+    }
+  ]
+}

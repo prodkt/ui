@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_tailwind",
+  "name": "logomark_tailwind",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_tailwind.tsx",
+      "content": "import type { SVGProps } from \"react\"\n\nexport const TailwindLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={17}\n    height={11}\n    viewBox=\"0 0 17 11\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <title>Tailwind</title>\n    <path\n      fillRule=\"evenodd\"\n      clipRule=\"evenodd\"\n      d=\"M8.39.458c-2.18 0-3.542 1.083-4.087 3.25.817-1.083 1.771-1.49 2.861-1.219.622.155 1.067.603 1.558 1.1.802.808 1.73 1.744 3.756 1.744 2.18 0 3.543-1.083 4.088-3.25-.818 1.083-1.771 1.49-2.861 1.219-.623-.155-1.067-.603-1.56-1.1-.8-.81-1.728-1.744-3.754-1.744ZM4.304 5.333c-2.18 0-3.543 1.084-4.088 3.25.818-1.082 1.772-1.49 2.862-1.219.622.156 1.066.604 1.558 1.1.801.81 1.73 1.745 3.756 1.745 2.18 0 3.542-1.084 4.087-3.25-.817 1.083-1.771 1.49-2.861 1.219-.622-.155-1.067-.604-1.558-1.1-.802-.81-1.73-1.745-3.756-1.745Z\"\n      fill=\"var(--sky-8)\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_tailwind.tsx"
+    }
+  ]
+}

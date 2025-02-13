@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_airtable",
+  "name": "logomark_airtable",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_airtable.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const AirtableLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={48}\n    height={41}\n    viewBox=\"0 0 48 41\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <path\n      d=\"M21.423.506 3.536 7.908c-.995.412-.984 1.824.017 2.221l17.962 7.123a6.664 6.664 0 0 0 4.913 0l17.963-7.123c1-.397 1.011-1.81.016-2.221L26.52.506a6.665 6.665 0 0 0-5.097 0Z\"\n      fill=\"#FFBF00\"\n    />\n    <path\n      d=\"M25.565 21.142v17.795c0 .846.854 1.425 1.64 1.114l20.016-7.77c.457-.18.756-.622.756-1.113V13.373c0-.846-.853-1.425-1.64-1.114l-20.015 7.77a1.199 1.199 0 0 0-.757 1.113Z\"\n      fill=\"#26B5F8\"\n    />\n    <path\n      d=\"m20.892 22.06-5.94 2.868-.604.292L1.81 31.228C1.015 31.61 0 31.032 0 30.149V13.448c0-.32.164-.595.383-.803.092-.092.196-.168.304-.228.3-.18.727-.227 1.09-.084l19.015 7.534c.966.384 1.042 1.738.1 2.193Z\"\n      fill=\"#ED3049\"\n    />\n    <path\n      d=\"m20.892 22.06-5.94 2.868L.382 12.645c.092-.092.196-.168.304-.228.3-.18.727-.227 1.09-.084l19.015 7.534c.966.384 1.042 1.738.1 2.193Z\"\n      fill=\"#000\"\n      fillOpacity={0.25}\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_airtable.tsx"
+    }
+  ]
+}

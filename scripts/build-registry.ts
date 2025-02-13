@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs';
 import { readdirSync } from 'node:fs';
 import path, { join } from 'node:path';
-
+import { buildLogoRegistry } from './logo-registry';
 const cwd = process.cwd();
 const packagesPath = join(cwd, 'packages');
 const packagesDir = readdirSync(packagesPath, { withFileTypes: true });
@@ -14,6 +14,11 @@ const packages = packagesDir
 
 const primitivesPath = join(cwd, 'packages/shadcn-ui/components/ui');
 const primitiveComponents = readdirSync(primitivesPath)
+  .filter((file) => file.endsWith('.tsx'))
+  .map((file) => file.replace('.tsx', ''));
+
+const logosPath = join(cwd, 'packages/logos');
+const logoComponents = readdirSync(logosPath)
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => file.replace('.tsx', ''));
 
@@ -36,7 +41,8 @@ const buildRegistry = async (pkg: string) => {
   const packageJson = await import(packagePath);
 
   const dependencies = Object.keys(packageJson.dependencies).filter(
-    (dep) => !['react', 'react-dom', '@repo/shadcn-ui'].includes(dep)
+    (dep) =>
+      !['react', 'react-dom', '@repo/shadcn-ui', '@repo/logos'].includes(dep)
   );
   const devDependencies = Object.keys(packageJson.devDependencies).filter(
     (dep) =>
@@ -159,6 +165,10 @@ const main = async () => {
   // Build registry for primitive components
   for (const component of primitiveComponents) {
     await buildPrimitiveRegistry(component);
+  }
+  // Build registry for logos
+  for (const component of logoComponents) {
+    await buildLogoRegistry(component);
   }
 };
 

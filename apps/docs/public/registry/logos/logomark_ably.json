@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_ably",
+  "name": "logomark_ably",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_ably.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const AblyLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={48}\n    height={40}\n    viewBox=\"0 0 48 40\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <path\n      fillRule=\"evenodd\"\n      clipRule=\"evenodd\"\n      d=\"M3.959 36.495 23.876 0h-5.32L0 33.773l3.959 2.722Zm40.206 0L24.124 0h5.443L48 33.773l-3.835 2.722Zm-20.041-15.34 19.793 15.587-3.834 2.846-15.836-12.371-15.835 12.37-4.082-2.845 19.794-15.587Z\"\n      fill=\"url(#ably_svg__a)\"\n    />\n    <defs>\n      <linearGradient\n        id=\"ably_svg__a\"\n        x1={13.293}\n        y1={48.706}\n        x2={33.025}\n        y2={26.791}\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor=\"#FF5416\" />\n        <stop offset={0.254} stopColor=\"#FF5115\" />\n        <stop offset={0.461} stopColor=\"#FF4712\" />\n        <stop offset={0.652} stopColor=\"#FF350E\" />\n        <stop offset={0.833} stopColor=\"#FF1E08\" />\n        <stop offset={1} stopColor=\"red\" />\n      </linearGradient>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_ably.tsx"
+    }
+  ]
+}

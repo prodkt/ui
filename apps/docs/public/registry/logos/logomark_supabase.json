@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_supabase",
+  "name": "logomark_supabase",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_supabase.tsx",
+      "content": "import type { SVGProps } from \"react\"\n\nexport const SupabaseLogomark = (props: SVGProps<SVGSVGElement>) => (\n  <svg\n    width={257}\n    height={263}\n    fill=\"currentColor\"\n    viewBox=\"0 0 256 263\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    preserveAspectRatio=\"xMidYMid\"\n    {...props}\n  >\n    <title>Supabase</title>\n    <defs>\n      <linearGradient\n        x1=\"20.862%\"\n        y1=\"20.687%\"\n        x2=\"63.426%\"\n        y2=\"44.071%\"\n        id=\"supabaseLogomark-a\"\n      >\n        <stop stopColor=\"#249361\" offset=\"0%\" />\n        <stop stopColor=\"#3ECF8E\" offset=\"100%\" />\n      </linearGradient>\n      <linearGradient\n        x1=\"1.991%\"\n        y1=\"-13.158%\"\n        x2=\"21.403%\"\n        y2=\"34.708%\"\n        id=\"supabaseLogomark-b\"\n      >\n        <stop offset=\"0%\" />\n        <stop stopOpacity={0} offset=\"100%\" />\n      </linearGradient>\n    </defs>\n    <path\n      d=\"M149.602 258.579c-6.718 8.46-20.338 3.824-20.5-6.977l-2.367-157.984h106.229c19.24 0 29.971 22.223 18.007 37.292l-101.37 127.669Z\"\n      fill=\"url(#supabaseLogomark-a)\"\n    />\n    <path\n      d=\"M149.602 258.579c-6.718 8.46-20.338 3.824-20.5-6.977l-2.367-157.984h106.229c19.24 0 29.971 22.223 18.007 37.292l-101.37 127.669Z\"\n      fillOpacity={0.2}\n      fill=\"url(#supabaseLogomark-b)\"\n    />\n    <path\n      d=\"M106.399 4.37c6.717-8.461 20.338-3.826 20.5 6.976l1.037 157.984H23.037c-19.241 0-29.973-22.223-18.008-37.292L106.4 4.369Z\"\n      fill=\"#3ECF8E\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_supabase.tsx"
+    }
+  ]
+}

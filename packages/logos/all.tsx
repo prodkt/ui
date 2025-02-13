@@ -423,7 +423,7 @@ export { ViteLogomark } from './logomark_vite';
 export { WizardsLogomark } from './logomark_wizards';
 export { ZeplinLogomark } from './logomark_zeplin';
 
-export const Index = () => (
+export const All = () => (
   <div className="flex flex-col gap-4 p-8">
     <div className="grid grid-cols-4 place-content-center place-items-center items-center justify-center gap-4">
       <AcrobatLogo />
@@ -571,4 +571,4 @@ export const Index = () => (
   </div>
 );
 
-export default Index;
+export default All;

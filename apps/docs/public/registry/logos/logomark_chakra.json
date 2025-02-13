@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_chakra",
+  "name": "logomark_chakra",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_chakra.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const ChakraLogomark = ({\n  withBrandColor = true,\n  ...props\n}: SVGProps<SVGSVGElement> & { withBrandColor?: boolean }) => (\n  <svg\n    width=\"65\"\n    height=\"65\"\n    viewBox=\"0 0 65 65\"\n    fill=\"none\"\n    xmlns=\"http://www.w3.org/2000/svg\"\n    {...props}\n  >\n    <circle\n      cx=\"32.7988\"\n      cy=\"32.8003\"\n      r=\"32\"\n      fill={`url(#chakra_svg__d-${props.id || \"\"})`}\n    />\n    <path\n      d=\"M18.4223 34.422L39.9834 13.0093C40.3861 12.6092 41.0344 13.096 40.7624 13.5944L32.7376 28.3026C32.5584 28.6305 32.7959 29.0307 33.1696 29.0307H47.0379C47.4847 29.0307 47.7003 29.5779 47.3736 29.8829L23.0714 52.564C22.6357 52.9706 21.9871 52.3976 22.3369 51.9151L33.8411 36.0449C34.0769 35.7194 33.8445 35.2636 33.4426 35.2636H18.7692C18.3298 35.2636 18.1105 34.7316 18.4223 34.422Z\"\n      className=\"text-white dark:text-gray-900\"\n      fill={withBrandColor ? \"#FFFFFF\" : \"currentColor\"}\n    />\n    <defs>\n      <linearGradient\n        id={`chakra_svg__d-${props.id || \"\"}`}\n        x1=\"32.7988\"\n        y1=\"0.800293\"\n        x2=\"32.7988\"\n        y2=\"64.8003\"\n        gradientUnits=\"userSpaceOnUse\"\n      >\n        <stop stopColor={withBrandColor ? \"#7ACBD4\" : \"currentColor\"} />\n        <stop\n          offset=\"0.916667\"\n          stopColor={withBrandColor ? \"#2AC6B7\" : \"currentColor\"}\n        />\n      </linearGradient>\n    </defs>\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_chakra.tsx"
+    }
+  ]
+}

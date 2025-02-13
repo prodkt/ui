@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://www.prodkt.cloud/logomark_azure-active-directory",
+  "name": "logomark_azure-active-directory",
+  "type": "registry:ui",
+  "author": "Bryan Funk <technology@prodkt.cloud>",
+  "registryDependencies": [],
+  "dependencies": [],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "logomark_azure-active-directory.tsx",
+      "content": "import * as React from \"react\"\nimport type { SVGProps } from \"react\"\n\nexport const AzureActiveDirectoryLogomark = (\n  props: SVGProps<SVGSVGElement>\n) => (\n  <svg\n    xmlns=\"http://www.w3.org/2000/svg\"\n    width={25}\n    height={25}\n    fill=\"none\"\n    {...props}\n  >\n    <path fill=\"#1E91DB\" d=\"m.5 14.368 12-14 12 14-12 10-12-10Z\" />\n    <path\n      fill=\"#fff\"\n      fillRule=\"evenodd\"\n      d=\"M11.885 9.272c.038.012.076.023.115.033v8.126a1.985 1.985 0 0 0-.39.145l-3.26-2.445c.097-.235.15-.493.15-.763 0-.4-.117-.771-.319-1.084l3.704-4.012Zm2.085-.548a2 2 0 1 0-2.94 0l-3.584 3.882a2 2 0 1 0 .303 3.324l3.093 2.32a2 2 0 1 0 3.316 0l3.093-2.32a2 2 0 1 0 .303-3.324L13.97 8.724Zm-.97.581c.039-.01.077-.02.115-.033l3.704 4.012a1.99 1.99 0 0 0-.169 1.847l-3.26 2.445a1.985 1.985 0 0 0-.39-.145V9.305Z\"\n      clipRule=\"evenodd\"\n    />\n  </svg>\n)\n",
+      "target": "components/ui/logos/logomark_azure-active-directory.tsx"
+    }
+  ]
+}
