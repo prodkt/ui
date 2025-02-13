@@ -30,6 +30,13 @@ type PreviewProps = {
   dependencies?: Record<string, string>;
 };
 
+type ComponentModule = {
+  name: string;
+  dependencies?: Record<string, string>;
+  devDependencies?: Record<string, string>;
+  files?: Array<{ content: string }>;
+};
+
 const parseDependencyVersion = (dependency: string) => {
   const [name, version] =
     (dependency as string).match(/^(.+?)(?:@(.+))?$/)?.slice(1) ?? [];
@@ -39,6 +46,17 @@ const parseDependencyVersion = (dependency: string) => {
 
 const parseContent = (content: string) => {
   return content.replace(/@\/registry\/new-york\/ui\//g, '@/components/ui/');
+};
+
+const componentCache = new Map<string, ComponentModule>();
+
+const loadComponent = async (path: string): Promise<ComponentModule> => {
+  if (componentCache.has(path)) {
+    return componentCache.get(path)!;
+  }
+  const mod = (await import(path)) as ComponentModule;
+  componentCache.set(path, mod);
+  return mod;
 };
 
 export const Preview = async ({
@@ -75,7 +93,6 @@ export const Preview = async ({
 
   const parseLogosComponents = async (str: string) => {
     const parsedString = parseContent(str);
-
     const matches = parsedString.match(
       /from ['"]@\/components\/ui\/logos\/([^'"]+)['"]/g
     );
@@ -91,46 +108,46 @@ export const Preview = async ({
         ),
       ];
 
-      for (const component of components) {
-        try {
-          const mod = (await import(
-            `../../public/registry/logos/${component}.json`
-          )) as {
-            name: string;
-            dependencies?: Record<string, string>;
-            devDependencies?: Record<string, string>;
-            files?: { content: string }[];
-          };
+      await Promise.all(
+        components.map(async (component) => {
+          try {
+            const mod = await loadComponent(
+              `../../public/registry/logos/${component}.json`
+            );
 
-          files[`/components/ui/logos/${mod.name}.tsx`] = parseContent(
-            mod.files?.[0]?.content ?? ''
-          );
+            files[`/components/ui/logos/${mod.name}.tsx`] = parseContent(
+              mod.files?.[0]?.content ?? ''
+            );
 
-          if (mod.dependencies) {
-            for (const dep of Object.values(mod.dependencies)) {
-              const { name, version } = parseDependencyVersion(dep);
-              dependencies[name] = version;
+            if (mod.dependencies) {
+              for (const [, dep] of Object.entries(mod.dependencies)) {
+                const { name, version } = parseDependencyVersion(dep);
+                dependencies[name] = version;
+              }
+            }
+
+            if (mod.devDependencies) {
+              for (const [, dep] of Object.entries(mod.devDependencies)) {
+                const { name, version } = parseDependencyVersion(dep);
+                devDependencies[name] = version;
+              }
+            }
+
+            if (mod.files?.[0]?.content) {
+              await parseLogosComponents(mod.files[0].content);
+            }
+          } catch (error) {
+            if (!component.includes('all')) {
+              console.warn(`Failed to load logos component: ${component}`);
             }
           }
-
-          if (mod.devDependencies) {
-            for (const dep of Object.values(mod.devDependencies)) {
-              const { name, version } = parseDependencyVersion(dep);
-              devDependencies[name] = version;
-            }
-          }
-
-          await parseLogosComponents(mod.files?.[0]?.content ?? '');
-        } catch (error) {
-          console.warn(`Failed to load logos component: ${component}`);
-        }
-      }
+        })
+      );
     }
   };
 
   const parseShadcnComponents = async (str: string) => {
     const parsedString = parseContent(str);
-
     const matches = parsedString.match(
       /from ['"]@\/components\/ui\/(?!(logos|prodkt-ui|logos\/))[^'"/]+['"]/g
     );
@@ -144,43 +161,48 @@ export const Preview = async ({
         ),
       ];
 
-      for (const component of components) {
-        try {
-          const mod = (await import(`./shadcn/${component}.json`)) as {
-            name: string;
-            dependencies?: Record<string, string>;
-            devDependencies?: Record<string, string>;
-            files?: { content: string }[];
-          };
+      await Promise.all(
+        components.map(async (component) => {
+          try {
+            const mod = await loadComponent(
+              `../../public/registry/primitive/${component}.json`
+            );
 
-          // Load required shadcn/ui component
-          files[`/components/ui/${mod.name}.tsx`] = parseContent(
-            mod.files?.[0]?.content ?? ''
-          );
+            files[`/components/ui/${mod.name}.tsx`] = parseContent(
+              mod.files?.[0]?.content ?? ''
+            );
 
-          // Load required dependencies
-          if (mod.dependencies) {
-            for (const dep of Object.values(mod.dependencies)) {
-              const { name, version } = parseDependencyVersion(dep);
+            if (mod.dependencies) {
+              for (const [, dep] of Object.entries(mod.dependencies)) {
+                const { name, version } = parseDependencyVersion(dep);
+                dependencies[name] = version;
+              }
+            }
 
-              dependencies[name] = version;
+            if (mod.devDependencies) {
+              for (const [, dep] of Object.entries(mod.devDependencies)) {
+                const { name, version } = parseDependencyVersion(dep);
+                devDependencies[name] = version;
+              }
+            }
+
+            if (mod.files?.[0]?.content) {
+              await parseShadcnComponents(mod.files[0].content);
+            }
+          } catch (error) {
+            if (
+              error instanceof Error &&
+              !error.message.includes('Cannot find module')
+            ) {
+              console.warn(
+                `Failed to load shadcn component: ${component}${
+                  error instanceof Error ? ` (${error.message})` : ''
+                }`
+              );
             }
           }
-
-          // Load required devDependencies
-          if (mod.devDependencies) {
-            for (const dep of Object.values(mod.devDependencies)) {
-              const { name, version } = parseDependencyVersion(dep);
-
-              devDependencies[name] = version;
-            }
-          }
-
-          await parseShadcnComponents(mod.files?.[0]?.content ?? '');
-        } catch (error) {
-          console.warn(`Failed to load shadcn component: ${component}`);
-        }
-      }
+        })
+      );
     }
   };
 

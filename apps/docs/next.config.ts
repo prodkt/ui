@@ -52,6 +52,7 @@ const sentryConfig: Parameters<typeof withSentryConfig>[1] = {
 };
 
 const config: NextConfig = {
+  staticPageGenerationTimeout: 120,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [

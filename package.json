@@ -1,42 +1,42 @@
 {
-	"name": "prodkt-ui",
-	"version": "0.0.1",
-	"bin": {
-		"prodkt-ui": "dist/index.js"
-	},
-	"files": ["dist/index.js"],
-	"scripts": {
-		"prebuild": "bun scripts/build-registry.ts",
-		"build": "turbo build",
-		"predev": "pnpm run prebuild",
-		"dev": "turbo dev",
-		"lint": "biome lint",
-		"format": "biome format",
-		"test": "turbo test",
-		"analyze": "turbo analyze",
-		"bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
-		"bump-ui": "npx shadcn@latest add --all --overwrite -c packages/shadcn-ui",
-		"output:css:shadcn": "npx @tailwindcss/cli -i ./packages/tailwind-config/globals.css -o ./apps/docs/public/preview/shadcn-ui.css --watch",
-		"output:css:global": "npx @tailwindcss/cli -i ./packages/tailwind-config/globals.css -o ./apps/docs/public/preview/tailwindcss.css --watch",
-		"clean": "git clean -xdf node_modules"
-	},
-	"devDependencies": {
-		"@auto-it/first-time-contributor": "^11.3.0",
-		"@biomejs/biome": "1.9.4",
-		"@types/node": "^22.13.2",
-		"turbo": "^2.4.2",
-		"typescript": "^5.7.3"
-	},
-	"engines": {
-		"node": ">=22"
-	},
-	"packageManager": "pnpm@10.3.0",
-	"type": "module",
-	"dependencies": {
-		"tsup": "^8.3.6",
-		"zod": "^3.24.2"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": ["@sentry/cli"]
-	}
+  "name": "prodkt-ui",
+  "version": "0.0.1",
+  "bin": {
+    "prodkt-ui": "dist/index.js"
+  },
+  "files": ["dist/index.js"],
+  "scripts": {
+    "prebuild": "bun scripts/build-registry.ts",
+    "build": "turbo build",
+    "predev": "pnpm run prebuild",
+    "dev": "turbo dev",
+    "lint": "biome lint",
+    "format": "biome format",
+    "test": "turbo test",
+    "analyze": "turbo analyze",
+    "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
+    "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/shadcn-ui",
+    "output:css:shadcn": "npx @tailwindcss/cli -i ./packages/tailwind-config/globals.css -o ./apps/docs/public/preview/shadcn-ui.css --watch",
+    "output:css:global": "npx @tailwindcss/cli -i ./packages/tailwind-config/globals.css -o ./apps/docs/public/preview/tailwindcss.css --watch",
+    "clean": "git clean -xdf node_modules"
+  },
+  "devDependencies": {
+    "@auto-it/first-time-contributor": "^11.3.0",
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.2",
+    "turbo": "^2.4.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.3.0",
+  "type": "module",
+  "dependencies": {
+    "tsup": "^8.3.6",
+    "zod": "^3.24.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@sentry/cli"]
+  }
 }
