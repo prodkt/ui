@@ -47,7 +47,7 @@
     "clsx": "^2.1.1",
     "colorjs.io": "^0.5.2",
     "date-fns": "^4.1.0",
-    "fumadocs-core": "15.0.6",
+    "fumadocs-core": "15.0.14",
     "fumadocs-mdx": "11.5.3",
     "fumadocs-typescript": "^3.0.3",
     "fumadocs-ui": "15.0.6",
