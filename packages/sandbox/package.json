@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@codesandbox/sandpack-react": "^2.19.11",
+    "@codesandbox/sandpack-react": "^2.20.0",
     "@repo/shadcn-ui": "workspace:*",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
