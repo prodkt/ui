@@ -8,7 +8,7 @@
     "@radix-ui/react-portal": "^1.1.4",
     "@repo/shadcn-ui": "workspace:*",
     "lucide-react": "^0.475.0",
-    "react": "^19.0.0",
+    "react": "^19.1.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
